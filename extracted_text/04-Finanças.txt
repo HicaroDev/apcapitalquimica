@@ -1,0 +1,152 @@
+﻿>DIAGNÓSTICO EMPRESARIAL
+RELATÓRIO DE AVALIAÇÃO DE PRÁTICAS E GESTÃO FINANCEIRA
+
+Empresa: Capital Química Indústria e Comércio de Produtos Químicos LTDA
+CNPJ: 23.202.193/0001-69
+Consultoria: R&V Consultores Associados
+
+INTRODUÇÃO
+Este relatório apresenta os resultados da Avaliação de Práticas e Gestão Financeira da empresa Capital Química, realizada como parte da Fase de Análise Documental da etapa de Diagnóstico do Método Vertex 360º.
+
+O objetivo é oferecer uma leitura crítica sobre os principais aspectos da estrutura financeira da empresa, identificando riscos, fragilidades e oportunidades de melhoria com foco no desenvolvimento sustentável da gestão.
+
+OBJETIVO
+O presente relatório tem como objetivo analisar as práticas de gestão financeira adotadas pela empresa Capital Química, com base nas informações levantadas no diagnóstico aplicado, a fim de identificar o nível de estruturação dos controles financeiros, a qualidade das informações utilizadas na tomada de decisão e os principais fatores que impactam a previsibilidade, a eficiência e a sustentabilidade financeira do negócio.
+
+METODOLOGIA
+As informações foram coletadas por meio de questionário estruturado aplicado com o apoio da liderança e servem como base para análises técnicas e para a elaboração de recomendações que visam o fortalecimento da gestão.
+
+Questionário Diagnóstico Financeiro Operacional: composto por perguntas distribuídas em temas como controle de receitas e despesas, planejamento financeiro, fluxo de caixa, precificação, endividamento, capital de giro, indicadores de desempenho, entre outros.
+Cada item foi avaliado em uma escala de 1 a 4, onde 1 representa ausência de controle e 4 representa aplicação plena com regularidade e confiabilidade.
+
+O relatório não se limita às pontuações atribuídas, considerando também os riscos decorrentes de práticas ausentes, informais ou desconectadas da realidade operacional da empresa.
+
+ANÁLISES GERADAS
+Informações sobre receitas e despesas
+A Capital Química demonstra conhecimento parcial sobre sua movimentação financeira. A liderança informa conhecer a receita média mensal em torno de R$ 1 milhão, porém não evidencia o mesmo nível de domínio sobre os desembolsos médios, e o acompanhamento é feito com base em uma DRE considerada não confiável. Esse dado é especialmente relevante, pois indica que a empresa até possui referência de faturamento, mas não dispõe de base segura para interpretar o resultado econômico real.
+
+Há utilização de planilhas em Excel e do sistema Bling, o que demonstra que existem instrumentos de controle em uso. No entanto, a própria observação registrada aponta que a empresa não utiliza a totalidade do sistema, o que sugere subaproveitamento da ferramenta disponível e manutenção de controles paralelos. Em contextos como esse, a gestão tende a operar com informação fragmentada, sujeita a retrabalho, inconsistência de classificação e baixa rastreabilidade gerencial.
+
+Outro ponto crítico é que a empresa classifica os gastos, mas não sabe se a classificação está correta, e já reconhece dificuldade nesse processo. Isso compromete diretamente a leitura de resultado, pois, quando a base de classificação é falha, relatórios como DRE, análises de margem e indicadores de desempenho passam a refletir mais a estrutura do lançamento do que a realidade do negócio. O próprio desconhecimento da lucratividade real, estimada apenas de forma intuitiva em torno de 7%, reforça esse problema.
+
+Planejamento Financeiro
+No campo do planejamento, a Capital Química demonstra intenção de crescimento e possui meta declarada de faturamento de R$ 18 milhões em 2026, além da intenção de estar com fluxo de caixa estruturado até julho de 2026. Esse dado é positivo por mostrar ambição e direcionamento. No entanto, a própria resposta indica que se tratam de metas de curto prazo sem planejamento estruturado, o que revela um descompasso entre intenção estratégica e capacidade de execução.
+
+A empresa reconhece que as decisões financeiras são tomadas de forma reativa, reagindo aos problemas e aos momentos da empresa, em vez de se apoiarem em planejamento prévio, cenários ou projeções. Esse achado é central, porque significa que a gestão financeira ainda atua mais no campo da resposta do que da antecipação. Em empresas de distribuição, isso tende a gerar forte vulnerabilidade em caixa, compras, reposição de estoque e gestão de capital de giro.
+
+Também foi apontado que a empresa acompanha a cotação do dólar, o que é coerente com seu segmento, mas entende que deveria acompanhar melhor políticas públicas e outros fatores externos. Isso demonstra alguma consciência sobre a influência do ambiente macroeconômico, mas ainda com monitoramento insuficiente para sustentar decisões mais robustas.
+
+Análise da Gestão de Investimentos
+A análise indica baixa maturidade nessa dimensão. Embora exista previsão de uma margem para investimento embutida na precificação, essa margem não está inserida dentro de um plano formal, com critérios, objetivos, priorização e avaliação de retorno. Ou seja, o investimento aparece mais como intenção difusa do que como prática estruturada de alocação de recursos.
+
+Além disso, foi informado que as decisões de investimento e aquisição não consideram a disponibilidade de caixa. Esse ponto é especialmente crítico, porque demonstra desconexão entre decisão de aplicação de recursos e capacidade financeira real da operação. Quando investimentos ou aquisições são feitos sem leitura adequada do caixa, há aumento do risco de descasamento financeiro, necessidade de crédito emergencial e pressão sobre fornecedores.
+
+Análise dos Custos, Despesas e Estrutura de Gastos 
+Essa é uma das áreas mais sensíveis do diagnóstico. O sistema disponibiliza relatórios e modelos personalizáveis, mas, pela ausência de classificação correta, a empresa não dispõe de demonstrativo confiável e organizado de receitas, custos, despesas e desembolsos. O problema, portanto, não está apenas na ausência de ferramenta, mas principalmente na fragilidade da parametrização e da lógica de registro.
+
+A empresa reconhece que classifica custos e despesas, mas não da forma correta, e que isso impede o uso dessas informações para análise de resultado e apoio à decisão. Esse cenário tem forte impacto gerencial: sem separação confiável entre custos, despesas, categorias operacionais e estrutura fixa, a empresa perde capacidade de enxergar quais linhas pressionam a margem, onde estão os desperdícios, qual é o custo de sustentar a operação e quais decisões comerciais realmente geram retorno.
+
+Também não existe critério de rateio dos custos fixos, embora a empresa utilize na precificação uma margem de 12% para absorção. Esse mecanismo, isoladamente, não substitui um modelo técnico de apropriação de custos. Sem rateio estruturado, a margem embutida no preço pode acabar funcionando como percentual genérico, sem aderência real à estrutura do negócio. Os custos variáveis, por sua vez, também não são analisados com confiabilidade, justamente porque a base classificatória está comprometida.
+
+Análise da Gestão de Caixa e Liquidez 
+A empresa possui lançamentos e acompanhamento diário de contas a pagar e contas a receber, e também realiza acompanhamento diário da disponibilidade de caixa. Há ainda conciliação bancária manual realizada diariamente, o que demonstra disciplina operacional e atenção ao financeiro de curto prazo. Esse é um ponto positivo importante, pois revela rotina ativa de acompanhamento.
+
+Entretanto, a análise mostra que esse controle ainda não se traduz em uma gestão de caixa estruturada. Os registros são organizados na linha do tempo, mas a priorização de pagamentos parece ser feita de maneira mais circunstancial do que por política financeira definida. Em outras palavras, existe rotina, mas ainda não existe modelo de gestão suficientemente maduro para transformar o acompanhamento diário em previsibilidade e decisão antecipada.
+
+Essa diferença entre controle operacional e gestão financeira estruturada é relevante. A empresa acompanha o caixa no presente, mas ainda não demonstra dominar sua lógica futura com segurança. Isso limita a capacidade de planejamento, compromete negociações com fornecedores e dificulta a construção de previsibilidade.
+
+Análise do Capital de Giro e Ciclo Financeiro 
+A Capital Química informa ter uma necessidade de capital de giro de R$ 1 milhão, mas também reconhece que não possui esse valor disponível. Esse é um dos achados mais críticos do diagnóstico, porque sinaliza uma insuficiência estrutural de recursos para sustentar o ciclo operacional da empresa com tranquilidade financeira.
+
+Além disso, a empresa afirma não conhecer seu ciclo financeiro, o que significa que não domina tecnicamente a relação entre prazo de compra, prazo de estocagem, prazo de venda e prazo de recebimento. Sem essa visão, a empresa pode até perceber sintomas — como falta de caixa, atraso em pagamentos e necessidade recorrente de giro —, mas não consegue atuar sobre a causa estrutural do problema.
+
+Do ponto de vista gerencial, isso significa que a empresa opera com elevada exposição à pressão financeira do próprio modelo operacional. Em negócios de distribuição, essa fragilidade pode comprometer compra de mercadoria, reposição, negociação com fornecedores e crescimento sustentável.
+
+Análise do Lucro e dos Indicadores Financeiros 
+A empresa informa acompanhar alguns números diariamente e menciona lógica relacionada a estoque, contas a receber e contas a pagar, o que demonstra alguma tentativa de leitura financeira. Também afirma utilizar esses indicadores para tomada de decisão e conhece o ponto de equilíbrio em valor, estimado em R$ 2 milhões, além de acompanhar ticket médio de R$ 2.100,00.
+
+No entanto, há uma contradição importante entre esse acompanhamento e a fragilidade da base de dados. Quando a empresa afirma que sua DRE não é confiável, que a classificação está incorreta e que não conhece a lucratividade real, isso reduz significativamente a robustez dos indicadores utilizados. Ou seja, ainda que alguns números sejam acompanhados, a qualidade analítica desses dados é insuficiente para sustentar decisões com segurança.
+
+Esse cenário é típico de operações que possuem rotina intensa de acompanhamento, mas com baixa maturidade na engenharia da informação financeira. Há esforço de leitura, mas pouca consistência na base que alimenta os indicadores.
+
+Análise da Precificação 
+A precificação da Capital Química é construída com base em custos e análise da concorrência, o que demonstra algum critério objetivo de formação de preços. Contudo, a empresa não conhece a lucratividade por produto, serviço ou operação, o que revela uma limitação importante: o preço pode até ser montado com referências de mercado, mas não está sendo validado pela rentabilidade real de cada linha comercial.
+
+Em empresas que operam com grande variedade de itens, esse ponto é especialmente sensível. Sem leitura da lucratividade por produto ou grupo de produtos, a empresa corre o risco de manter itens com baixa margem, conceder condições inadequadas ou crescer faturamento sem crescimento proporcional de resultado.
+
+Análise do Endividamento, Credores e Contingência 
+A empresa informou que existe programação financeira, mas que há gaps no ciclo financeiro e que é costumeiro atrasar pagamentos. Esse dado é altamente relevante, pois demonstra que o problema não está apenas no volume da obrigação, mas na forma como a operação absorve e responde às exigências do seu ciclo financeiro.
+
+O atraso recorrente em pagamentos tende a deteriorar relacionamento com fornecedores, reduzir poder de negociação, gerar encargos e comprometer credibilidade financeira. Além disso, a empresa não possui fundo de contingência, o que aumenta ainda mais sua exposição diante de qualquer oscilação de caixa, atraso de recebimento ou necessidade extraordinária.
+
+Análise da Tributação e Contabilidade
+A empresa informa não conhecer sua rotina tributária nem como os impostos são apurados. Esse é um achado grave do ponto de vista gerencial, pois demonstra total dependência da execução externa, sem domínio mínimo sobre um tema que afeta diretamente margem, risco fiscal e conformidade da operação.
+
+Embora exista acompanhamento e validação em relação à folha de pagamento, o mesmo não ocorre com os impostos fiscais. Isso revela um acompanhamento parcial da contabilidade, insuficiente para garantir leitura estratégica da carga tributária e dos impactos financeiros associados.
+
+Análise da Atualização e Conhecimento Financeiro
+A empresa afirma possuir sistema ou método de controle financeiro, mas a liderança reconhece que não realiza atualmente nenhuma atualização voltada à área financeira. Esse ponto reforça a percepção de que a Capital Química opera com esforço prático e rotina diária, mas com baixa evolução conceitual e técnica da liderança financeira.
+
+Do ponto de vista de maturidade, isso indica uma empresa que sente os problemas do financeiro no cotidiano, mas ainda não estruturou aprendizado e desenvolvimento para elevar a qualidade das decisões e da gestão.
+
+Pontos Críticos e Pontos Fortes Identificados
+
+Pontos Críticos Identificados:
+Baixa confiabilidade das informações financeiras gerenciais: embora a empresa acompanhe parte de sua movimentação financeira, a própria liderança reconhece que a DRE não é confiável, o que compromete a leitura real da lucratividade, do desempenho e da tomada de decisão.
+Classificação inadequada de custos, despesas e gastos: a empresa informa que classifica os gastos, mas não sabe se a classificação está correta, além de reconhecer que isso compromete o uso das informações para análise do resultado. Esse achado tem impacto direto sobre margem, precificação, leitura de desempenho e consistência dos relatórios.
+Gestão predominantemente reativa: as decisões financeiras são tomadas de forma reativa, sem planejamento estruturado e sem análise prévia consistente de cenários. Isso fragiliza a previsibilidade do negócio e aumenta a exposição a urgências operacionais e financeiras.
+Baixa maturidade na análise de investimentos e aquisições: a empresa não avalia adequadamente a disponibilidade de caixa antes de realizar aquisições ou decisões de investimento, o que amplia o risco de descasamento financeiro e pressão sobre o capital de giro.
+Insuficiência de capital de giro e desconhecimento do ciclo financeiro: foi apontada uma necessidade de capital de giro de R$ 1 milhão, porém a empresa não dispõe desse valor e também não conhece tecnicamente seu ciclo financeiro. Esse é um ponto estruturalmente crítico, pois afeta diretamente liquidez, negociação com fornecedores e estabilidade operacional.
+Atraso recorrente em pagamentos e ausência de reserva de contingência: a empresa relata que é costumeiro atrasar pagamentos em função de gaps no ciclo financeiro e não possui fundo de contingência para imprevistos. Isso indica fragilidade de caixa e maior vulnerabilidade a oscilações operacionais.
+Baixo domínio tributário da operação: a liderança informa não conhecer sua rotina tributária nem a forma de apuração dos impostos, o que demonstra dependência excessiva da contabilidade e reduz a capacidade de gestão preventiva sobre riscos fiscais e impactos financeiros.
+Baixo investimento em atualização financeira da liderança: foi informado que atualmente não há busca ativa por atualização específica na área financeira, o que tende a limitar a evolução da maturidade gerencial e a qualidade das decisões.
+
+Pontos Fortes Identificados:
+Existência de rotina operacional de acompanhamento financeiro: a empresa realiza acompanhamento diário do contas a pagar, contas a receber e disponibilidade de caixa, o que demonstra disciplina operacional e atenção constante à movimentação financeira.
+Realização frequente de conciliação bancária: a conciliação bancária é feita manualmente de forma diária, o que representa uma prática positiva de controle e reduz riscos de inconsistência entre movimentação bancária e registros internos.
+Uso de sistema e ferramentas de controle: a empresa utiliza Excel e Bling como instrumentos de apoio à gestão financeira. Embora ainda haja subaproveitamento e necessidade de melhor parametrização, já existe uma base tecnológica instalada que pode ser melhor explorada.
+Clareza sobre metas de crescimento: apesar de ainda não estruturadas em planejamento formal, existem metas declaradas de faturamento e intenção de estruturar o fluxo de caixa, o que demonstra visão de crescimento e disposição para evolução.
+Acompanhamento de alguns indicadores operacionais e comerciais: a empresa acompanha o ticket médio e possui referência do ponto de equilíbrio em valor, além de utilizar algumas leituras financeiras no dia a dia. Isso indica que já existe uma base inicial para evolução futura dos indicadores gerenciais.
+Percepção dos próprios gargalos pela liderança: em várias respostas, a liderança reconhece limitações como classificação incorreta, fragilidade da DRE, ausência de planejamento e necessidade de acompanhar melhor fatores externos. Esse grau de consciência é positivo, pois facilita processos de correção e implementação de melhorias.
+
+CONCLUSÃO
+A Capital Química apresenta uma operação financeira com sinais claros de atividade intensa, rotina de controle e esforço de acompanhamento, mas ainda marcada por baixa confiabilidade das informações gerenciais. O diagnóstico mostra que a empresa possui instrumentos, sistema, lançamentos diários, conciliação frequente e atenção ao caixa, porém esses elementos ainda não se converteram em uma estrutura financeira tecnicamente consistente. O problema central não é ausência total de controle, mas sim a combinação entre controle operacional fragmentado, parametrização inadequada, classificação inconsistente e baixa capacidade analítica da informação gerada.
+
+A maturidade financeira da empresa pode ser compreendida como baixa em estrutura gerencial e intermediária em rotina operacional. Há presença de prática e esforço, mas falta base confiável para leitura de resultado, margem, capital de giro e decisão estratégica. Isso faz com que a empresa opere pressionada pelo próprio ciclo financeiro, reaja aos problemas à medida que surgem e mantenha um modelo de gestão vulnerável à expansão sem controle. A ausência de clareza sobre lucratividade, a insuficiência de capital de giro, o atraso recorrente em pagamentos e o desconhecimento tributário não são falhas isoladas; juntos, esses fatores indicam uma estrutura financeira que sustenta a operação no curto prazo, mas ainda não suporta crescimento com previsibilidade, segurança e governança.
+
+As informações e análises apresentadas neste relatório compõem a base técnica da Fase de Análise Documental da etapa de Diagnóstico do Método Vertex 360º.
+
+Esses dados também serão integrados ao Relatório Final de Diagnóstico Empresarial e utilizados como subsídio direto para a construção do Planejamento Estratégico da Capital Química.
+
+
+Goiânia/GO, 08 de Julho de 2026.
+
+
+
+
+____________________________________
+Raiane da Cruz Vieira
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+
+____________________________________
+Stela Anizia Rodrigues Alves
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+____________________________________
+Eduardo Augusto de Campos Vaz
+Sócio Administrador
+Capital Química Indústria e Comércio de Produtos Químicos LTDA
+

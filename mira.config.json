@@ -1,0 +1,18 @@
+{
+  "sources": [],
+  "decks": [
+    {
+      "name": "capital-quimica",
+      "template": "pitch-projeto",
+      "theme": "light-minimal",
+      "createdAt": "2026-07-08T06:56:09.034Z"
+    }
+  ],
+  "version": "0.1.36",
+  "projectName": "apresentacao_Capital_Quimica",
+  "userName": "mira-apresentacao",
+  "chatLanguage": "pt-br",
+  "defaultTheme": "mira-dark",
+  "installedAt": "2026-07-08T06:48:57.545Z",
+  "updatedAt": "2026-07-08T06:48:57.546Z"
+}

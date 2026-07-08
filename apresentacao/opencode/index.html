@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Química — Apresentação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <nav id="sidebar">
+    <div class="sb-header">
+      <img src="assets/logo.png" alt="R&V" class="sb-logo">
+      <div class="sb-brand">CAPITAL<br>QUÍMICA</div>
+      <div class="sb-subtitle">Diagnóstico R&amp;V</div>
+    </div>
+    <div id="sb-nav"></div>
+    <div class="sb-footer">
+      <span id="sb-counter">0 / 0</span>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div id="progress-bar"></div>
+    <div id="slides-container"></div>
+
+    <div id="nav-buttons">
+      <button id="prev-btn" aria-label="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button id="next-btn" aria-label="Próximo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </main>
+</div>
+
+<div id="loading-screen">
+  <div class="loader"></div>
+  <p>Carregando apresentação...</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

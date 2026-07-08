@@ -1,0 +1,18 @@
+node_modules/
+.npm-cache/
+*.log
+.DS_Store
+agents/mira-builder/videos_header/
+decks/**/assets/*.glb
+
+# MkDocs build output
+site/
+
+# Notas/rascunhos locais
+no_permissions.md
+
+# Config local do Claude Code
+.claude/settings.local.json
+
+# Deck de apresentacao (mantido apenas local, contem videos pesados)
+decks/apresentacao-mira/

@@ -1,0 +1,129 @@
+﻿>DIAGNÓSTICO EMPRESARIAL
+RELATÓRIO TÉCNICO DE RECOMENDAÇÕES PARA IMPLEMENTAÇÃO
+
+Empresa: Capital Química Indústria e Comércio de Produtos Químicos LTDA
+CNPJ: 23.202.193/0001-69
+Consultoria: R&V Consultores Associados
+
+INTRODUÇÃO
+Este relatório consolida as recomendações técnicas decorrentes das análises realizadas no âmbito do Diagnóstico Empresarial da Capital Química, empresa atuante na distribuição atacadista e no fracionamento de matérias-primas químicas.
+
+A leitura integrada dos relatórios evidenciou oportunidades relevantes relacionadas à regularização tributária e documental, à confiabilidade das informações financeiras, à formalização dos processos operacionais, à integração entre áreas, ao fortalecimento da liderança e à estruturação da gestão comercial.
+
+As recomendações foram organizadas para apoiar a evolução da empresa em direção a uma operação mais controlada, rastreável e orientada por critérios técnicos, reduzindo dependências de práticas informais e fortalecendo as condições necessárias para crescimento sustentável.
+
+OBJETIVO
+O objetivo deste relatório é consolidar e organizar as recomendações técnicas geradas a partir dos relatórios do Diagnóstico Empresarial, estruturando-as por área de gestão para facilitar sua leitura, priorização e posterior desdobramento em ações práticas.
+
+O documento servirá como base técnica para a próxima etapa do Método Vertex 360º, especialmente para o desenvolvimento do Planejamento Estratégico e do Plano de Ação, direcionando a empresa para o fortalecimento da governança, dos controles internos, da gestão financeira, da estrutura de pessoas, dos processos operacionais e da inteligência comercial.
+
+METODOLOGIA
+A abordagem integrou leitura técnica dos produtos do Diagnóstico Empresarial e análise crítica cruzada para derivar recomendações orientadas à execução. O trabalho considerou, de forma articulada:
+
+Avaliação Documental por Dimensão: verificação de regularidade documental, estrutura organizacional, contratos, controles patrimoniais e aderência dos registros às necessidades de gestão.
+Avaliação de Práticas e Gestão Financeira: análise da estrutura financeira, classificação das informações, controles, lucratividade, capital de giro, precificação e integração contábil-gerencial.
+Análise DISC: identificação de aspectos comportamentais relevantes para comunicação, liderança, rotinas de trabalho, responsabilização e integração entre áreas.
+Análise SWOT: leitura das forças, fraquezas, oportunidades e ameaças, com foco nas implicações estratégicas, operacionais, comerciais e organizacionais.
+Estrutura de Processos – SIPOC: análise dos fluxos operacionais, responsabilidades, controles, interfaces entre áreas e oportunidades de padronização e rastreabilidade.
+
+A interpretação resultou da triangulação das evidências, conectando aspectos financeiros, operacionais, comerciais e organizacionais. Em seguida, as recomendações foram consolidadas e classificadas em Finanças, Pessoas, Processos e Comercial, com ênfase em governança, controle e desempenho.
+
+ANÁLISES GERADAS
+RECOMENDAÇÕES TÉCNICAS – FINANÇAS
+1. Desenvolver plano estruturado para regularização dos passivos tributários existentes, com definição de prioridades, cronograma e estratégias de negociação.
+2. Elaborar plano de ação para obtenção das licenças e documentos regulatórios pendentes, reduzindo riscos de conformidade operacional e fiscal.
+3. Revisar integralmente a parametrização dos sistemas financeiros e operacionais, especialmente o sistema Bling, reduzindo a dependência de controles paralelos em Excel e aumentando a confiabilidade dos relatórios gerenciais.
+4. Estruturar rotina formal de conciliações financeiras, validação periódica de saldos e fechamento mensal, assegurando consistência das informações antes da análise gerencial.
+5. Revisar os critérios de classificação contábil e gerencial de receitas, custos, despesas e desembolsos, alinhando a base de dados às necessidades de gestão, DRE, relatórios e indicadores.
+6. Estruturar demonstrativo financeiro gerencial com separação clara entre receitas, custos, despesas e desembolsos.
+7. Implantar rotina de apuração confiável da lucratividade nominal e percentual por produto, linha comercial e operação.
+8. Formalizar o cálculo e o acompanhamento da necessidade de capital de giro, integrando análise de prazos de recebimento, disponibilidade de caixa e estrutura de pagamentos.
+9. Estruturar política de priorização de pagamentos baseada em critérios financeiros, evitando decisões pautadas exclusivamente por urgências operacionais.
+10. Estabelecer rotina de validação tributária e fiscal em conjunto com a contabilidade.
+11. Implantar controle formal de ativos imobilizados, integrado aos controles patrimoniais e contábeis.
+12. Estruturar formalmente a meta de faturamento para 2026, com metas mensais, marcos intermediários, indicadores e responsáveis.
+13. Implantar rotina de planejamento financeiro com análise de cenários e acompanhamento periódico.
+14. Ampliar o monitoramento de fatores externos relevantes ao negócio, especialmente políticas públicas, tributação setorial, câmbio e condições macroeconômicas.
+15. Desenvolver a liderança financeira e capacitar os responsáveis internos em classificação de gastos, análise de resultado, fluxo de caixa, capital de giro, lucratividade e interpretação tributária básica.
+16. Implantar indicadores financeiros e gerenciais para acompanhamento de faturamento, margem, custos, disponibilidade de recursos, lucratividade, capital de giro e desempenho financeiro.
+
+RECOMENDAÇÕES TÉCNICAS – PESSOAS
+1. Revisar a estrutura de cargos atualmente praticada, alinhando os cargos registrados às funções efetivamente exercidas pelos colaboradores.
+2. Desenvolver estrutura formal de cargos, funções e critérios de evolução profissional, fortalecendo a clareza organizacional e a gestão de pessoas.
+3. Estruturar regras claras de conduta, responsabilidades, feedback e valorização dos profissionais comprometidos, reduzindo práticas informais e comportamentos que comprometam a produtividade e o ambiente de trabalho.
+4. Fortalecer a liderança operacional por meio de avaliação complementar do encarregado de produção, considerando domínio técnico, autonomia, comunicação, gestão de prioridades e capacidade de acompanhamento de rotina.
+5. Formalizar as responsabilidades dos cargos de liderança e ampliar a capacidade de acompanhamento das rotinas, prioridades e entregas das equipes.
+6. Capacitar as equipes em processos, ferramentas, atendimento, vendas, financeiro, organização operacional e segurança na manipulação e expedição de produtos.
+7. Desenvolver comunicação assertiva, definição de combinados, feedback, responsabilização e gestão de conflitos, reduzindo dependência de alinhamentos informais entre áreas.
+8. Criar rituais de alinhamento intersetorial entre Comercial, Produção, Logística e Expedição, com foco em prioridades, pedidos críticos, pendências, riscos operacionais e responsáveis.
+
+RECOMENDAÇÕES TÉCNICAS – PROCESSOS
+1. Elaborar organograma organizacional e mapear os principais processos da empresa, reduzindo dependência de conhecimento informal e ampliando a clareza sobre responsabilidades.
+2. Formalizar os processos críticos de vendas, faturamento, estoque, compras, produção, fracionamento, expedição, conferência, entrega e pós-venda, definindo etapas, responsáveis, prazos e critérios de conferência.
+3. Estruturar controles integrados de estoque e movimentações, assegurando atualização confiável de entradas, saídas, transferências, produtos em produção e produtos acabados.
+4. Instituir rotina periódica de conciliação entre estoque físico e estoque sistêmico, reduzindo divergências que impactem compras, produção, vendas e faturamento.
+5. Padronizar o processo de compras e recebimento, abrangendo solicitação, aprovação, cotação, negociação, emissão de pedido, recebimento e conferência de mercadorias.
+6. Implantar checklists para recebimento e armazenagem, contemplando quantidade, qualidade, especificação, lote, nota fiscal, divergências e condições de armazenamento.
+7. Estruturar controles de produção e fracionamento, com ordens de produção e registros de insumos utilizados, lote de origem, quantidade produzida, perdas, rendimento, responsáveis, horário de execução e saldo de produto acabado.
+8. Implantar checklists e padrões operacionais para produção, conferência, expedição, carregamento, entregas e tratativa de divergências.
+9. Formalizar o fluxo entre pedido de venda, separação, faturamento e despacho, evitando venda de itens indisponíveis, divergências de preço, atrasos fiscais e erros na entrega.
+10. Implantar controle rigoroso de expedição, com conferência obrigatória de produtos, pedidos e notas fiscais antes da saída das mercadorias.
+11. Melhorar a comunicação entre departamentos por meio de fluxo oficial de solicitações, prioridades e alterações de pedidos, reduzindo alterações informais que afetem rotas, entregas e atendimento.
+12. Implantar manutenção preventiva para veículos, equipamentos, mangueiras e ferramentas, reduzindo riscos operacionais, paradas não planejadas e manutenção emergencial.
+13. Organizar estoque e infraestrutura operacional, com melhoria da separação, manutenção do ambiente, adequação de equipamentos e recursos necessários à expedição.
+14. Implantar indicadores operacionais e gerenciais para acompanhamento de acuracidade de estoque, prazo médio de compra e recebimento, divergências no recebimento, tempo de fracionamento, rendimento e perdas, pedidos faturados no prazo, erros de separação, prazo de expedição, devoluções, avarias e ocorrências de entrega.
+15. Elaborar SIPOCs específicos para os processos de apoio, especialmente financeiro, gestão de pessoas, qualidade, segurança, tecnologia, manutenção, controle de fornecedores e gestão administrativa.
+16. Formalizar e organizar contratos com fornecedores e prestadores estratégicos, fortalecendo a governança, a gestão de terceiros e a definição de responsabilidades.
+
+RECOMENDAÇÕES TÉCNICAS – COMERCIAL
+1. Implantar rotina comercial com metas, indicadores, agenda de follow-up, registros de oportunidades, controle de propostas e acompanhamento de conversão.
+2. Estruturar a expansão comercial por meio de presença digital, campanhas de captação, relacionamento com novos clientes e avaliação de novos produtos ou frentes de produção.
+3. Conectar a precificação à lucratividade real por produto e linha comercial.
+4. Revisar as margens utilizadas na formação de preços à luz da estrutura real de custos e despesas.
+5. Criar leitura comercial integrada entre preço, margem, capital de giro e prazo de recebimento.
+6. Avaliar o impacto financeiro da expansão pretendida, evitando crescimento de faturamento sem sustentação de caixa e rentabilidade.
+7. Integrar Comercial, Produção, Expedição e Financeiro por meio de fluxos formais, responsáveis definidos, pontos de conferência e prazos de transição entre etapas.
+8. Implantar indicadores comerciais para acompanhamento de vendas, faturamento, margem, conversão, propostas, prazo de recebimento, satisfação de clientes e desempenho por linha de produto.
+9. Estruturar processos de pós-venda e acompanhamento de clientes, fortalecendo a continuidade do relacionamento e a identificação de oportunidades comerciais.
+
+CONCLUSÃO
+As recomendações técnicas consolidadas neste relatório evidenciam que a Capital Química necessita fortalecer simultaneamente sua estrutura financeira, seus controles operacionais, sua capacidade de integração entre áreas e sua gestão de pessoas para sustentar o crescimento de forma mais previsível e segura.
+
+A regularização dos passivos e documentos pendentes, a melhoria da confiabilidade das informações financeiras, a padronização dos processos de estoque, produção, compras e expedição, bem como a formalização de rotinas comerciais e de liderança, constituem frentes complementares para redução de riscos e aumento da capacidade de gestão.
+
+Dessa forma, este relatório representa a base técnica para a próxima etapa do Método Vertex 360º, na qual serão desenvolvidos o Planejamento Estratégico e o Plano de Ação correspondentes. Nessa etapa, as recomendações serão priorizadas e desdobradas em objetivos, metas, responsáveis, prazos e indicadores de acompanhamento, permitindo implementação estruturada e monitoramento contínuo dos resultados.
+
+
+Goiânia/GO, 08 de Julho de 2026.
+
+
+
+
+____________________________________
+Raiane da Cruz Vieira
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+
+
+
+____________________________________
+Stela Anizia Rodrigues Alves
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+____________________________________
+Eduardo Augusto de Campos Vaz
+Sócio Administrador
+Capital Química Indústria e Comércio de Produtos Químicos LTDA
+

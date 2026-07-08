@@ -1,0 +1,82 @@
+{
+  "name": "mira-animator",
+  "version": "0.1.32",
+  "description": "Agentes e templates para criação de slides animados com D3.js em HTML",
+  "bin": {
+    "mira": "bin/mira.js"
+  },
+  "type": "module",
+  "keywords": [
+    "slides",
+    "presentation",
+    "d3",
+    "animation",
+    "html",
+    "ai",
+    "claude",
+    "agents"
+  ],
+  "files": [
+    "agents/_shared",
+    "agents/mira-new",
+    "agents/mira-animator",
+    "agents/mira-size-animator",
+    "agents/mira-animated-metaphor",
+    "agents/mira-3d",
+    "agents/mira-qrcode",
+    "agents/mira-survey",
+    "agents/mira-quiz",
+    "agents/mira-tactics",
+    "agents/mira-remote-control",
+    "agents/mira-image",
+    "agents/mira-svg-morph",
+    "agents/mira-icon-morph",
+    "agents/mira-svg-animator",
+    "agents/mira-squared",
+    "agents/mira-vertical",
+    "agents/mira-thirds",
+    "agents/mira-transition-dissolve",
+    "agents/mira-slide-to-video",
+    "agents/mira-offline",
+    "agents/mira-builder/SKILL.md",
+    "agents/mira-chart",
+    "agents/mira-chart-race",
+    "agents/mira-builder/templates",
+    "agents/mira-builder/video_lista.md",
+    "agents/mira-copywriter",
+    "agents/mira-extract",
+    "agents/mira-get-videos",
+    "agents/mira-image-prompt",
+    "agents/mira-image-template",
+    "agents/mira-img-animator",
+    "agents/mira-planner",
+    "agents/mira-references",
+    "agents/mira-validator",
+    "agents/mira-visuals",
+    "bin/",
+    "lib/",
+    "templates/",
+    "mira-serve.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "author": "sandeco",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeco/mira-animator.git"
+  },
+  "homepage": "https://github.com/sandeco/mira-animator",
+  "bugs": {
+    "url": "https://github.com/sandeco/mira-animator/issues"
+  },
+  "engines": {
+    "node": ">=18.20.2"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.0",
+    "ora": "^8.0.0",
+    "yoctocolors-cjs": "^2.1.2"
+  }
+}

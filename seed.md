@@ -1,0 +1,4 @@
+minha esposa faz apresentação em pdf e entrega uns relatorio em word ou pdf para o cliente queria reverte em um site seguir esse modelo : file:///C:/Users/USUARIO/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/LocalState/sessions/DF4B1E25082D02207E4855A676B6F84CD8F0727D/transfers/2026-27/Capital%20Qu%C3%ADmica%20-%203%C2%AA%20Entrega.html ... lembrando que quero mais clean e moderno não quero que fique tudo bagunçado, .pdf/ ja esta em sequencia .
+- crie a apresentação la dentro da .apresentacao/ 
+- dentro vc cria um pasta chamada opencode , poque vou colocar outra AI para fazer a apresentacao em forma de slide com mais efeito visuais , e quero que vc crie a estrutura basica do site para quando eu coloco la no opencode ela insira os slides la dentro de uma pasta que se chame slide. Oque vc vai fazer agora é criar a estrutura basica para quando o opencode colocar la no slide ela vai entender 
+- depois converta para um site como aquele 

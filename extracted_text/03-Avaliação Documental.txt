@@ -1,0 +1,148 @@
+﻿>DIAGNÓSTICO EMPRESARIAL
+RELATÓRIO DE AVALIAÇÃO DOCUMENTAL POR DIMENSÃO
+
+Empresa: Capital Química Indústria e Comércio de Produtos Químicos LTDA
+CNPJ: 23.202.193/0001-69
+Consultoria: R&V Consultores Associados
+
+INTRODUÇÃO
+A análise documental constitui uma etapa fundamental do Diagnóstico Empresarial do Método Vertex 360º, pois permite avaliar o nível de organização, conformidade, disponibilidade e confiabilidade das informações que sustentam a gestão da empresa. A partir da verificação dos documentos disponibilizados, é possível identificar fragilidades, riscos, inconsistências e oportunidades de melhoria relacionadas às dimensões contábil, financeira, operacional e de recursos humanos.
+
+No caso da Capital Química, empresa fundada em 2018 e atuante na distribuição atacadista e fracionada de matérias-primas químicas em diversos estados, a avaliação documental assume relevância ainda maior devido às exigências regulatórias inerentes ao segmento. A análise permite compreender o grau de maturidade dos controles atualmente utilizados e sua capacidade de suportar a tomada de decisão, a conformidade legal e o crescimento sustentável da organização.
+
+OBJETIVO
+O presente relatório tem como finalidade apresentar os resultados da Avaliação Documental por Dimensão da Fase de Análise Documental da etapa de Diagnóstico Empresarial do Método Vertex 360º, aplicada à Capital Química.
+
+O objetivo é verificar o nível de organização, conformidade e integridade documental da empresa, com foco em identificar lacunas, riscos e potenciais de melhoria para embasar o desenvolvimento de ações estratégicas nas fases seguintes do plano de transformação organizacional.
+
+METODOLOGIA
+A análise foi conduzida a partir da aplicação de um checklist técnico detalhado previamente estruturado e compreendeu quatro eixos: contábil-fiscal, financeiro, operacional e recursos humanos, voltado à verificação da existência, atualização e aderência dos documentos às exigências legais e às boas práticas de gestão.
+
+O processo foi complementado por entrevistas e alinhamentos com a liderança da empresa, permitindo compreender o contexto operacional, validar informações e interpretar os impactos decorrentes da documentação apresentada. Também foram consideradas as particularidades do segmento químico, que exige elevado nível de conformidade regulatória, controle operacional e gestão de riscos.
+
+AVALIAÇÃO POR DIMENSÃO
+Contábil e Fiscal
+A Capital Química apresentou integralmente as demonstrações contábeis solicitadas, demonstrando disponibilidade documental e suporte da contabilidade para atendimento das demandas de análise. A empresa encontra-se enquadrada no regime de Lucro Real, o que exige maior rigor na gestão tributária, contábil e financeira.
+
+As inscrições municipal e estadual encontram-se ativas e regulares. Em relação às licenças regulatórias específicas do segmento químico, a empresa apresentou documentação relevante e compatível com sua atividade, incluindo registros junto à Polícia Federal, Exército Brasileiro, Conselho Regional de Química (CRQ), IBAMA e Licença Ambiental, todos dentro dos respectivos prazos de validade.
+
+Por outro lado, a análise identificou fragilidades relevantes relacionadas à regularidade fiscal. A certidão estadual apresentada evidencia a existência de débitos vinculados a sete processos distintos junto à SEFAZ. Adicionalmente, não foi apresentada Certidão Federal, sendo substituída por relatórios demonstrando a existência de débitos tributários já inscritos em dívida ativa.
+
+Também não foram apresentados o Certificado de Conformidade do Corpo de Bombeiros, o Alvará da Vigilância Sanitária e o Alvará de Funcionamento. Embora a empresa tenha informado que a regularização depende de adequações estruturais e arquitetônicas futuras, a ausência desses documentos representa uma limitação relevante sob a ótica da conformidade operacional.
+
+De forma geral, a documentação contábil demonstra boa disponibilidade de informações, porém coexistindo com passivos tributários significativos e pendências regulatórias que demandam atenção prioritária.
+
+Financeira
+A documentação financeira disponibilizada demonstra que a empresa possui controles e relatórios formalmente existentes, porém apresenta limitações relevantes relacionadas à confiabilidade e consistência das informações geradas.
+
+Foram apresentados fluxo de caixa, contas a pagar, contas a receber, relatórios de faturamento, inadimplência, custos e despesas. Entretanto, durante a análise, não foi possível validar integralmente diversos saldos em função de inconsistências entre os relatórios apresentados.
+
+Segundo informações obtidas durante as entrevistas, tais inconsistências decorrem de uma combinação de fatores, incluindo problemas de parametrização do sistema, lançamentos inadequados, conciliações incompletas e utilização simultânea de critérios contábeis e financeiros sem padronização adequada.
+
+A inadimplência é controlada por meio de planilha paralela utilizada para acompanhamento junto ao escritório de cobrança, uma vez que o relatório extraído do sistema não representa adequadamente a realidade da carteira. Situação semelhante ocorre com o faturamento, cujo relatório gerado pelo sistema apresenta distorções decorrentes da forma como renegociações de débitos são registradas, produzindo impacto direto sobre a confiabilidade dos números.
+
+Também foram identificadas oportunidades de melhoria na classificação de custos e despesas, dificultando análises gerenciais mais precisas sobre rentabilidade e desempenho operacional.
+
+Em relação aos ativos, a empresa não possui controle formal de imobilizado. Em contrapartida, foi apresentado relatório de estoque extraído do ERP, utilizado para controle das mercadorias comercializadas.
+
+A estrutura de endividamento merece atenção especial. Foram identificados débitos tributários relevantes junto à SEFAZ, Receita Federal e plataforma Regularize, totalizando valores expressivos sem evidência de negociação ou plano estruturado de regularização. Além disso, a empresa mantém operações de crédito junto ao Sicoob, Santander, Stone e aporte financeiro realizado por sócio para capital de giro.
+
+A análise evidencia que a principal fragilidade financeira da Capital Química não está na ausência de controles, mas na baixa confiabilidade das informações produzidas pelos controles atualmente existentes, o que limita significativamente sua utilização como instrumento de gestão e tomada de decisão.
+
+Operacional
+A avaliação da documentação operacional demonstra uma estrutura parcialmente formalizada, porém concentrada em processos específicos da operação.
+
+A empresa não possui organograma formalizado, o que limita a visualização da estrutura organizacional, das responsabilidades e dos fluxos de decisão.
+
+Foi identificado apenas um procedimento operacional documentado denominado Fluxo Obrigatório de Faturamento e Expedição, voltado a uma atividade crítica da operação. Apesar de representar uma iniciativa importante de padronização, não foram identificados documentos equivalentes para os demais processos organizacionais.
+
+A empresa utiliza o ERP Bling para gestão operacional e o Simples CRM para atividades comerciais, demonstrando utilização de ferramentas tecnológicas para suporte à operação.
+
+Foram apresentadas diretrizes organizacionais desenvolvidas por consultoria anterior, embora exista a expectativa de revisão e adaptação dessas definições ao momento atual da empresa.
+
+Em relação aos contratos empresariais, foi apresentado contrato com a empresa responsável pela segurança do trabalho. Contudo, diversos outros fornecedores e prestadores estratégicos foram mencionados sem que os respectivos contratos fossem disponibilizados para análise, incluindo serviços relacionados à contabilidade, marketing, cartão ponto, benefícios e análise de crédito.
+
+Também foi apresentada documentação oriunda de consultoria anterior com foco em reposicionamento institucional e vendas.
+
+De forma geral, a empresa demonstra iniciativas de organização operacional, porém ainda possui oportunidades relevantes para ampliação da formalização dos processos, estrutura organizacional e gestão contratual.
+
+Recursos Humanos
+A documentação de recursos humanos apresenta nível intermediário de formalização.
+
+Foi disponibilizada relação atualizada dos colaboradores, contendo cargos definidos para os profissionais da organização. Também foram apresentados Código de Conduta e Ética e documento contendo as políticas de benefícios atualmente praticadas pela empresa.
+
+Por outro lado, não foram identificados instrumentos estruturados de gestão de pessoas, como plano de cargos e salários, manual de cargos e funções ou plano de carreira.
+
+Durante a análise, foi relatado que existem situações em que as funções efetivamente desempenhadas pelos colaboradores diferem dos cargos formalmente registrados, indicando possível necessidade de revisão e alinhamento da estrutura funcional.
+
+Embora a empresa possua instrumentos básicos de orientação comportamental e benefícios formalizados, a ausência de mecanismos estruturados para gestão de cargos e desenvolvimento profissional limita a evolução da área de pessoas e reduz a clareza sobre responsabilidades e critérios de crescimento interno.
+
+CONCLUSÃO
+A documentação analisada demonstra que a Capital Química possui um nível de organização documental superior ao observado em empresas de porte semelhante, especialmente em razão das exigências regulatórias impostas pelo segmento químico e da disponibilidade de demonstrações contábeis, relatórios financeiros, licenças específicas e documentos de recursos humanos.
+Entretanto, a análise evidencia que a existência dos documentos não necessariamente se traduz em informações confiáveis para gestão. As principais fragilidades identificadas concentram-se na qualidade e consistência dos controles financeiros, na regularidade fiscal da empresa e na ausência de formalização mais ampla dos processos operacionais e da estrutura de cargos.
+Observa-se uma empresa que apresenta crescimento operacional e atuação em múltiplos estados, porém com mecanismos de gestão que ainda demandam maior integração, padronização e confiabilidade para sustentar decisões estratégicas e reduzir riscos futuros.
+
+Aspectos Críticos Identificados
+Existência de passivo tributário relevante sem plano formal de regularização;
+Débitos inscritos junto à SEFAZ, Receita Federal e Regularize;
+Ausência de Certidão Federal;
+Ausência de Alvará de Funcionamento, Vigilância Sanitária e Certificado de Conformidade dos Bombeiros;
+Baixa confiabilidade dos relatórios financeiros utilizados na gestão;
+Problemas de parametrização, lançamentos e conciliações dos sistemas;
+Utilização de controles paralelos para gestão da inadimplência;
+Inconsistências entre relatórios financeiros e contábeis;
+Ausência de controle formal de imobilizado;
+Ausência de organograma e de mapeamento formal dos processos organizacionais;
+Divergências identificadas entre cargos registrados e funções efetivamente exercidas.
+
+Aspectos Positivos Observados
+Demonstrações contábeis disponibilizadas integralmente;
+Utilização do regime de Lucro Real com suporte contábil estruturado;
+Inscrições municipais e estaduais regulares;
+Licenças específicas do segmento químico devidamente apresentadas;
+Existência de controles financeiros formalmente implantados;
+Controle de estoque realizado por ERP;
+Existência de diretrizes organizacionais formalizadas;
+Código de Conduta e Ética implantado;
+Relação de colaboradores organizada e documentada;
+Histórico de investimento em consultorias e iniciativas de melhoria.
+
+
+
+
+
+Goiânia/GO, 08 de Julho de 2026.
+
+
+
+
+
+
+____________________________________
+Raiane da Cruz Vieira
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+
+
+
+____________________________________
+Stela Anizia Rodrigues Alves
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+____________________________________
+Eduardo Augusto de Campos Vaz
+Sócio Administrador
+Capital Química Indústria e Comércio de Produtos Químicos LTDA
+

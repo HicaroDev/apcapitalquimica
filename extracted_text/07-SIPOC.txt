@@ -1,0 +1,218 @@
+﻿>DIAGNÓSTICO EMPRESARIAL
+RELATÓRIO DE ESTRUTURA DE PROCESSOS (SIPOC)
+
+Empresa: Capital Química Indústria e Comércio de Produtos Químicos LTDA
+CNPJ: 23.202.193/0001-69
+Consultoria: R&V Consultores Associados
+
+INTRODUÇÃO
+A estrutura de processos organizacionais representa a forma como as atividades são organizadas, conectadas e executadas para transformar demandas, insumos e informações em produtos e entregas ao cliente. Em empresas que atuam com distribuição e fracionamento de matérias-primas químicas, a organização dos processos é especialmente relevante, pois envolve controle de estoque, rastreabilidade de produtos, registro de entradas e saídas, integração entre áreas e segurança na movimentação operacional.
+
+Na Fase de Análise de Ambientes do Diagnóstico Empresarial do Método Vertex 360º, a análise dos fluxos operacionais tem como objetivo identificar o grau de organização, integração e padronização das rotinas internas, fornecendo insumos para avaliação da maturidade operacional e para direcionamento das ações estratégicas futuras.
+
+No caso da Capital Química, o SIPOC apresentado contempla o macroprocesso primário relacionado à compra, recebimento, registro, fracionamento, venda, faturamento e expedição de produtos. O fluxo mapeado evidencia a interdependência entre diretoria, comercial, produção, expedição e financeiro ao longo da operação.
+
+OBJETIVO
+Este relatório tem como objetivo analisar a estrutura do macroprocesso primário da Capital Química, com base no modelo SIPOC apresentado, considerando as etapas que compõem o ciclo operacional de aquisição, fracionamento e comercialização de matérias-primas químicas.
+
+A análise busca evidenciar os principais pontos de integração, controles necessários, fragilidades operacionais e oportunidades de melhoria relacionadas à eficiência, rastreabilidade, controle de estoque, fluidez entre áreas e confiabilidade das informações gerenciais.
+
+METODOLOGIA
+A metodologia aplicada consistiu na análise do diagrama SIPOC — Supplier, Input, Process, Output, Customer — elaborado para o macroprocesso primário da empresa.
+Foram considerados os seguintes elementos:
+Fornecedores: áreas ou agentes que originam demandas, informações, produtos ou documentos;
+Entradas: solicitações de compra, informações de estoque, demanda comercial, pedidos, mercadorias e documentos fiscais;
+Processos/Subprocessos: atividades de compra, recebimento, registro de entrada, produção/fracionamento, venda, separação, faturamento e despacho;
+Saídas: pedidos de compra realizados, mercadorias conferidas, produtos disponíveis em estoque, produtos fracionados, pedidos faturados e mercadorias despachadas;
+Clientes: áreas internas, fornecedores e clientes externos beneficiados por cada etapa.
+
+A análise técnica considerou o encadeamento das atividades, a dependência entre setores, a necessidade de controles de rastreabilidade, os riscos de falhas de comunicação e a existência de pontos críticos de registro e conferência.
+
+ANÁLISE DA ESTRUTURA DE PROCESSOS
+Macroprocesso Primário – Compra, Fracionamento e Comercialização de Produtos Químicos
+
+Compra
+O processo de compra é iniciado a partir de solicitações da diretoria, comercial e produção, considerando informações de estoque, demanda comercial e condições de mercado. As atividades mapeadas envolvem recebimento da solicitação, análise da necessidade de compra, cotação, negociação com fornecedor, fechamento da compra e geração do pedido no sistema.
+A saída esperada é o pedido de compra realizado, que passa a orientar o recebimento da mercadoria e a continuidade do fluxo operacional.
+
+Análise técnica:
+A compra é uma etapa crítica para a continuidade da operação, pois interfere diretamente na disponibilidade de matérias-primas, no nível de estoque, no custo de aquisição e na capacidade de atendimento às vendas. O SIPOC indica que a tomada de decisão considera estoque, demanda comercial e informações de mercado, o que representa um ponto positivo.
+Entretanto, a efetividade desse processo depende da confiabilidade dos dados utilizados. Caso as informações de estoque estejam desatualizadas ou as previsões comerciais não sejam acompanhadas de forma estruturada, a empresa pode enfrentar compras emergenciais, excesso de itens, rupturas de estoque ou perda de margem por negociações realizadas sob pressão.
+
+Pontos de atenção:
+Necessidade de critérios formais para solicitação e aprovação de compras;
+Integração entre estoque, comercial e produção antes do fechamento do pedido;
+Registro sistemático de cotações e condições negociadas;
+Acompanhamento de fornecedores, preços, prazos e qualidade das entregas;
+Controle de pedidos em aberto e previsão de recebimento.
+
+Recebimento e Armazenagem de Mercadorias
+Após a emissão do pedido de compra, a expedição recebe a mercadoria, realiza a conferência e providencia a armazenagem. As principais entradas são o pedido de compra, a mercadoria recebida e a nota fiscal correspondente.
+A saída é a mercadoria recebida e conferida, acompanhada da nota fiscal, disponibilizada para continuidade do registro e controle interno.
+
+Análise técnica:
+O recebimento é um ponto crítico de controle, pois representa a transição entre a compra negociada e a entrada física do produto na empresa. A conferência adequada deve assegurar que quantidade, especificação, qualidade, lote e documentação fiscal estejam compatíveis com o pedido realizado.
+No segmento químico, essa etapa demanda atenção adicional devido à necessidade de rastreabilidade, segurança de armazenagem e controle de produtos que podem possuir características específicas de manuseio. Falhas na conferência ou no armazenamento podem gerar divergências entre estoque físico e sistema, risco de perdas, problemas de rastreabilidade e impactos na produção e na expedição futura.
+
+Pontos de atenção:
+Checklist de conferência de mercadoria e nota fiscal;
+Validação de quantidade, especificação, lote e condição do produto;
+Definição de critérios de armazenamento por tipo de material;
+Registro de divergências de recebimento e tratativa com fornecedor;
+Atualização imediata do status da mercadoria recebida.
+
+Registro de Entrada no Sistema
+Após o recebimento e conferência, o financeiro realiza o registro da entrada da mercadoria no sistema. A saída é o produto reconhecido como disponível em estoque e devidamente lançado para utilização pelas demais áreas.
+
+Análise técnica:
+O lançamento sistêmico representa um dos principais pontos de conexão entre operação, estoque e gestão financeira. Essa etapa é determinante para garantir que os saldos registrados reflitam a realidade física, que o custo do produto seja reconhecido corretamente e que as decisões de compra, produção e venda sejam baseadas em informações confiáveis.
+A centralização dessa atividade no financeiro exige alinhamento rigoroso com expedição e diretoria. Caso exista demora entre recebimento físico e lançamento no sistema, podem surgir distorções de estoque, dificuldade na programação de produção, falhas em vendas e inconsistências contábeis ou financeiras.
+
+Pontos de atenção:
+Definição de prazo máximo para lançamento após recebimento;
+Conferência entre pedido de compra, nota fiscal e mercadoria física;
+Integração entre expedição, financeiro e produção;
+Controle de divergências entre estoque físico e estoque sistêmico;
+Rotina periódica de inventário e conciliação de estoque.
+
+Produção e Fracionamento
+A etapa de produção é iniciada com produtos disponíveis em estoque e contempla geração de ordem de produção, retirada de insumos, disponibilização no local de fracionamento, execução do fracionamento, estocagem do produto acabado e finalização da ordem no sistema.
+A saída é o produto fracionado e pronto para venda.
+
+Análise técnica:
+O fracionamento é o núcleo técnico da operação, pois transforma matérias-primas adquiridas em produtos comercializáveis. A existência de ordem de produção e finalização no sistema demonstra a intenção de manter vínculo entre estoque de insumos, produção realizada e produto acabado.
+Contudo, a maturidade desse processo depende da formalização dos controles de produção. É necessário garantir rastreabilidade entre insumo de origem, lote, quantidade utilizada, volume produzido, perdas, responsável pela execução e estoque final disponível. Sem esses registros, a empresa pode enfrentar dificuldades para medir rendimento, identificar perdas, controlar custos e apurar margem por produto.
+
+Pontos de atenção:
+Padronização das ordens de produção;
+Controle de lote, quantidade, perdas e rendimento do fracionamento;
+Registro de responsáveis e horário de execução;
+Conciliação entre insumos consumidos e produtos acabados;
+Controle de estoque do produto fracionado;
+Procedimentos operacionais e critérios de segurança para fracionamento.
+
+Comercialização e Geração de Pedido de Venda
+Com os produtos fracionados e disponíveis para venda, o comercial realiza a venda e gera o pedido de venda. A saída é o produto vendido e direcionado para separação.
+
+Análise técnica:
+O processo comercial depende diretamente da confiabilidade das informações de estoque e disponibilidade de produtos. A geração do pedido de venda deve refletir corretamente itens, quantidades, condições comerciais, preços, forma de pagamento, prazo de entrega e eventuais especificidades do cliente.
+A ausência de controles formais nessa etapa pode gerar venda de produtos indisponíveis, erro na separação, divergência de preço, retrabalho entre comercial e financeiro ou atrasos no faturamento.
+
+Pontos de atenção:
+Consulta de estoque atualizada antes da formalização da venda;
+Padronização das condições comerciais e descontos;
+Registro completo do pedido de venda;
+Integração entre comercial, expedição e financeiro;
+Controle de pedidos pendentes, em separação e faturados.
+
+Separação de Mercadorias
+Após a emissão do pedido de venda, a expedição realiza a separação da mercadoria. A saída é o pedido separado e pronto para faturamento.
+
+Análise técnica:
+A separação é uma etapa operacional crítica para assegurar que o cliente receba os produtos corretos, nas quantidades corretas e em condições adequadas. Como a empresa trabalha com produtos químicos e fracionados, a precisão na separação e identificação é essencial para evitar erros de entrega, devoluções, riscos de segurança e danos à relação comercial.
+A qualidade desse processo depende da conferência do pedido, da identificação adequada dos produtos e da atualização do estoque após a separação.
+
+Pontos de atenção:
+Checklist de separação e conferência;
+Identificação correta de produtos, lotes e quantidades;
+Controle de pedidos separados e aguardando faturamento;
+Atualização de estoque conforme movimentação;
+Definição clara de responsabilidades na conferência final.
+
+Faturamento
+Após a separação, o financeiro realiza o faturamento do pedido. A saída é o pedido faturado e pronto para despacho.
+
+Análise técnica:
+O faturamento é a etapa que formaliza a venda sob os aspectos fiscais e financeiros. Sua correta execução depende da consistência das informações originadas pelo comercial e da confirmação da separação realizada pela expedição.
+Falhas nessa etapa podem resultar em emissão incorreta de documentos fiscais, divergência entre pedido e nota fiscal, atraso no despacho, necessidade de cancelamentos ou retrabalho entre áreas. A integração entre comercial, expedição e financeiro é, portanto, indispensável.
+
+Pontos de atenção:
+Conferência entre pedido de venda, separação e documento fiscal;
+Validação de cadastro, tributação, condição comercial e forma de pagamento;
+Controle de pedidos pendentes de faturamento;
+Tratativa formal para cancelamentos, devoluções e reemissões;
+Integração com contas a receber e acompanhamento de recebimentos.
+
+Despacho de Mercadorias
+Após o faturamento, a expedição realiza o despacho da mercadoria ao cliente. A saída é o produto despachado ao cliente.
+
+Análise técnica:
+O despacho representa a etapa final da operação e materializa a entrega da promessa comercial. Para que esse processo seja confiável, é necessário garantir que a mercadoria esteja corretamente identificada, acompanhada da documentação necessária e encaminhada pelo modal de transporte adequado.
+O SIPOC evidencia a conclusão do fluxo com o despacho, porém não detalha controles de transporte, confirmação de entrega, rastreabilidade pós-expedição ou gestão de ocorrências. Esses pontos são relevantes para reduzir devoluções, avarias, atrasos e divergências de entrega.
+
+Pontos de atenção:
+Conferência final antes do despacho;
+Controle de transportadora, rota e prazo de entrega;
+Registro de comprovantes de despacho e entrega;
+Monitoramento de ocorrências, devoluções e avarias;
+Comunicação proativa com cliente sobre status da entrega.
+
+Análise Geral
+A análise do SIPOC da Capital Química demonstra uma operação com fluxo sequencial e logicamente estruturado, conectando compra, recebimento, registro de entrada, produção, venda, separação, faturamento e despacho. O processo evidencia uma cadeia de valor clara e forte interdependência entre diretoria, comercial, produção, expedição e financeiro.
+
+Pontos Fortes Identificados
+Fluxo operacional mapeado de ponta a ponta, desde a solicitação de compra até o despacho ao cliente;
+Etapas críticas da operação claramente identificadas, incluindo compra, conferência de mercadoria, registro no sistema, fracionamento, venda, faturamento e expedição;
+Existência de ordem de produção e finalização no sistema para o processo de fracionamento;
+Participação integrada das áreas de diretoria, comercial, produção, expedição e financeiro;
+Presença de controles relevantes no fluxo, como pedido de compra, nota fiscal, pedido de venda e faturamento;
+Sequência operacional aderente à dinâmica de distribuição e fracionamento de matérias-primas químicas.
+
+Fragilidades e Riscos Observados
+Alta dependência da confiabilidade e atualização tempestiva das informações de estoque;
+Risco de divergência entre estoque físico e estoque sistêmico, com impacto direto em compras, produção, vendas e faturamento;
+Necessidade de maior formalização dos controles de recebimento, incluindo conferência de quantidade, especificação, lote e condições da mercadoria;
+Ausência de detalhamento, no SIPOC, sobre controles de rastreabilidade de insumos, produtos fracionados, perdas e rendimento de produção;
+Possibilidade de falhas de integração entre comercial, expedição e financeiro nas transições entre pedido, separação, faturamento e despacho;
+Ausência de indicadores formais para acompanhar produtividade, perdas, acuracidade de estoque, prazo de expedição e ocorrências de entrega;
+Necessidade de aprofundar os controles relacionados à segurança, armazenagem e movimentação de produtos químicos;
+Ausência de SIPOC específico para os macroprocessos secundários, limitando a análise das áreas de apoio.
+
+Leitura Técnica Consolidada
+A estrutura atual sustenta a operação e demonstra que as principais etapas do ciclo produtivo e comercial estão identificadas. Contudo, a eficiência do processo depende da consolidação de controles operacionais, registros sistêmicos confiáveis e integração entre as áreas envolvidas.
+A principal vulnerabilidade está na possibilidade de falhas de informação ao longo do fluxo. Como estoque, produção, venda, faturamento e expedição são etapas diretamente conectadas, qualquer inconsistência de registro ou atraso de comunicação pode gerar impactos em cadeia, como compras emergenciais, indisponibilidade de produtos, erro de separação, atraso de faturamento, retrabalho e perda de margem.
+Também se destaca a necessidade de estruturar controles específicos para o fracionamento, especialmente relacionados a lote, consumo de insumos, rendimento, perdas, produto acabado e rastreabilidade. Esse ponto é relevante tanto para o controle operacional e financeiro quanto para a segurança e confiabilidade da operação.
+
+CONCLUSÃO
+A estrutura de processos da Capital Química apresenta uma cadeia operacional coerente e aderente à dinâmica do negócio, abrangendo as etapas essenciais para aquisição, fracionamento e comercialização de matérias-primas químicas. O fluxo mapeado evidencia a participação de áreas fundamentais e demonstra que a empresa possui uma lógica operacional definida para conduzir a mercadoria desde a compra até o despacho ao cliente.
+
+Entretanto, a efetividade dessa estrutura depende da formalização dos procedimentos, da confiabilidade dos dados de estoque, do registro tempestivo das movimentações e da integração entre comercial, expedição, produção e financeiro. Em uma operação que envolve compra de insumos, fracionamento e distribuição de produtos químicos, falhas de rastreabilidade, divergências de estoque ou ausência de controles de produção podem gerar impactos financeiros, comerciais, operacionais e de segurança.
+
+O principal desafio identificado não está na ausência de fluxo, mas na necessidade de fortalecer os mecanismos de controle que sustentam esse fluxo. A evolução da operação dependerá da transformação das etapas mapeadas em rotinas padronizadas, documentadas, mensuráveis e conectadas por informações confiáveis.
+
+Esses dados também serão integrados ao Relatório Final de Diagnóstico Empresarial e utilizados como subsídio direto para a construção do Planejamento Estratégico da Capital Química.
+
+
+Goiânia/GO, 08 de Julho de 2026.
+
+
+
+
+____________________________________
+Raiane da Cruz Vieira
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+
+
+
+____________________________________
+Stela Anizia Rodrigues Alves
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+____________________________________
+Eduardo Augusto de Campos Vaz
+Sócio Administrador
+Capital Química Indústria e Comércio de Produtos Químicos LTDA
+

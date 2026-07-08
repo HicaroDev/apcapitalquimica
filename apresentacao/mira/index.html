@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Química — Apresentação Executiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#052A5E;--gold:#9A7B4F;
+  --bg-main:#FFFFFF;--bg-side:#F8F9FA;--bg-card:#FFFFFF;
+  --text-main:#1F2937;--text-muted:#4B5563;--text-muted2:#6B7280;
+  --border:#E5E7EB;--accent:var(--gold);--sidebar-w:240px;
+  --green:#16a34a;--red:#dc2626;
+  --teal:var(--accent);--white:var(--bg-main);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--bg-main);color:var(--text-main);font-size:15px;line-height:1.7}
+
+/* SIDEBAR */
+.sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--bg-side);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100;overflow-y:auto}
+.sb-logo{padding:22px 20px 16px;border-bottom:1px solid var(--border)}
+.sb-brand{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;letter-spacing:.08em;color:var(--navy);line-height:1.1}
+.sb-sub{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);margin-top:3px}
+.sb-badge{display:inline-block;background:#9A7B4F1A;border:1px solid #9A7B4F30;color:var(--accent);font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;margin-top:8px}
+.nav{padding:10px 0;flex:1}
+.nav-group{padding:12px 20px 4px;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted2)}
+.nav-link{display:flex;align-items:center;gap:8px;padding:7px 20px;text-decoration:none;color:var(--text-muted);font-size:12px;font-weight:500;border-left:2px solid transparent;transition:all .15s}
+.nav-link:hover{color:var(--navy);background:rgba(5,42,94,0.05)}
+.nav-link.active{color:var(--accent);border-left-color:var(--accent);background:rgba(154,123,79,0.08)}
+.nav-dot{width:5px;height:5px;border-radius:50%;background:currentColor;flex-shrink:0;opacity:.5}
+.nav-link.active .nav-dot{opacity:1}
+.sb-foot{padding:12px 20px;border-top:1px solid var(--border);font-size:10px;color:var(--text-muted2)}
+
+/* MAIN */
+.main{margin-left:var(--sidebar-w);min-height:100vh}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#f0f4f8 0%,#ffffff 100%);padding:68px 56px 56px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.h-pill{display:inline-flex;align-items:center;gap:6px;background:#052A5E10;border:1px solid #052A5E20;color:var(--navy);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:22px}
+.h-pill::before{content:'●';font-size:7px;color:var(--accent)}
+.h-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;line-height:.92;margin-bottom:4px}
+.h-t1{font-size:72px;color:var(--navy);display:block}
+.h-t2{font-size:72px;color:var(--accent);display:block}
+.h-t3{font-size:42px;color:var(--navy);display:block;margin-top:10px}
+.h-desc{max-width:560px;margin-top:16px;font-size:15px;color:var(--text-muted);line-height:1.6}
+.h-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;padding-top:28px;border-top:1px solid var(--border)}
+.hm-l{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted2);margin-bottom:3px}
+.hm-v{font-size:14px;font-weight:700;color:var(--navy)}
+
+/* SECTION */
+.sec{padding:56px 56px;border-bottom:1px solid var(--border)}
+.sec-ey{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.sec-line{width:26px;height:2px;background:var(--accent)}
+.sec-tag{font-family:'DM Mono',monospace;font-size:10px;color:var(--accent);font-weight:500;letter-spacing:.06em}
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:800;line-height:1;color:var(--navy);margin-bottom:4px}
+.sec-title span{color:var(--accent)}
+.sec-desc{font-size:14px;color:var(--text-muted);max-width:640px;line-height:1.6;margin-bottom:32px}
+
+/* CARDS */
+.cards{display:grid;gap:14px;margin-bottom:22px}
+.c2{grid-template-columns:1fr 1fr}
+.c3{grid-template-columns:1fr 1fr 1fr}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:20px;box-shadow: 0 2px 4px rgba(0,0,0,0.02);}
+.card-al{border-left:3px solid var(--accent)}
+.cl{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted2);margin-bottom:5px}
+.ct2{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px;line-height:1.2}
+.cb{font-size:12.5px;color:var(--text-muted);line-height:1.6}
+
+/* ALERTS */
+.alert{border-radius:8px;padding:14px 18px;margin-bottom:18px;display:flex;gap:12px;align-items:flex-start}
+.alert-teal{background:rgba(154,123,79,0.08);border:1px solid rgba(154,123,79,0.2)}
+.alert-icon{font-size:15px;margin-top:1px;flex-shrink:0}
+.alert-body{font-size:13px;color:var(--text-muted);line-height:1.6}
+
+/* UTILS */
+.sh{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px}
+ul.ck{list-style:none;padding:0}
+ul.ck li{font-size:12.5px;color:var(--text-muted);padding:4px 0;display:flex;gap:7px;align-items:flex-start}
+ul.ck li::before{content:'▸';color:var(--accent);font-size:10px;margin-top:4px;flex-shrink:0}
+
+/* EMBED OPNECODE SLIDES */
+.opencode-frame {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-side);
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sb-logo">
+    <img src="logo.png" alt="Logo R&V" style="width: 100%; max-width: 180px; margin-bottom: 15px; display: block;">
+    <div class="sb-brand">CAPITAL QUÍMICA</div>
+    <div class="sb-sub">Apresentação Executiva</div>
+    <div class="sb-badge">Diagnóstico · 2026</div>
+  </div>
+  <div class="nav">
+    <div class="nav-group">Diagnóstico Estratégico</div>
+    <a href="#cenario" class="nav-link active"><span class="nav-dot"></span>Cenário Atual</a>
+    <a href="#swot" class="nav-link"><span class="nav-dot"></span>Análise SWOT</a>
+    <a href="#maturidade" class="nav-link"><span class="nav-dot"></span>Maturidade e Setor</a>
+    
+    <div class="nav-group">Ações & Implementação</div>
+    <a href="#recomendacoes" class="nav-link"><span class="nav-dot"></span>Recomendações</a>
+    <a href="#passos" class="nav-link"><span class="nav-dot"></span>Próximos Passos</a>
+    
+    <div class="nav-group">Apresentação Visual</div>
+    <a href="#slides" class="nav-link"><span class="nav-dot"></span>Slides Interativos</a>
+  </div>
+  <div class="sb-foot">Rodrigues & Vieira<br>Consultores Associados</div>
+</nav>
+
+<main class="main">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="h-pill">Documento Executivo · 2026</div>
+  <h1 class="h-title">
+    <span class="h-t1">CAPITAL QUÍMICA</span>
+    <span class="h-t2">DIAGNÓSTICO E</span>
+    <span class="h-t3">ESTRUTURAÇÃO ESTRATÉGICA</span>
+  </h1>
+  <p class="h-desc">Apresentação dos resultados da etapa de diagnóstico empresarial. Identificação de gargalos, pontos fortes consolidados e estruturação de oportunidades para sustentar o crescimento sólido e rentável.</p>
+  <div class="h-meta">
+    <div><div class="hm-l">Consultores</div><div class="hm-v">Raiane Vieira & Stela Rodrigues</div></div>
+    <div><div class="hm-l">Período Base</div><div class="hm-v">Abril - Julho 2026</div></div>
+    <div><div class="hm-l">Fase Atual</div><div class="hm-v">Transição de Etapas</div></div>
+    <div><div class="hm-l">Status</div><div class="hm-v">Diagnóstico Concluído</div></div>
+  </div>
+</div>
+
+<!-- BLOCO 1 - CENÁRIO ATUAL -->
+<section class="sec" id="cenario">
+  <div class="sec-ey"><div class="sec-line"></div><div class="sec-tag">VISÃO GERAL</div></div>
+  <h2 class="sec-title">Cenário <span>Atual</span></h2>
+  <p class="sec-desc">Identificação dos principais gargalos estruturais e fatores críticos observados durante a etapa de diagnóstico na organização.</p>
+  
+  <div class="cards c2">
+    <div class="card card-al" style="border-left-color: var(--green);">
+      <div class="cl">Pontos Fortes</div>
+      <div class="ct2">Base Sólida Identificada</div>
+      <ul class="ck">
+        <li>Demonstrações contábeis disponibilizadas.</li>
+        <li>Controle de estoque via ERP.</li>
+        <li>Histórico de investimento em melhorias.</li>
+        <li>Clareza sobre metas e engajamento da equipe.</li>
+      </ul>
+    </div>
+    <div class="card card-al" style="border-left-color: var(--gold);">
+      <div class="cl">Pontos Fracos</div>
+      <div class="ct2">Principais Fragilidades</div>
+      <ul class="ck">
+        <li>Passivo tributário sem plano de regularização.</li>
+        <li>Baixa confiabilidade de relatórios financeiros.</li>
+        <li>Falta de capital de giro e integração de áreas.</li>
+        <li>Decisões centralizadas na liderança.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 2 - SWOT -->
+<section class="sec" id="swot">
+  <div class="sec-ey"><div class="sec-line"></div><div class="sec-tag">MATRIZ SWOT</div></div>
+  <h2 class="sec-title">Análise <span>SWOT</span> da Equipe</h2>
+  
+  <div class="cards c2">
+    <div class="card">
+      <div class="ct2" style="color:var(--teal)">S - Strengths (Forças)</div>
+      <ul class="ck">
+        <li>Ambiente de trabalho tranquilo e pagamento em dia.</li>
+        <li>Liderança voltada ao crescimento e acessível.</li>
+        <li>Carteira de clientes consolidada e produtos de qualidade.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ct2" style="color:var(--gold)">W - Weaknesses (Fraquezas)</div>
+      <ul class="ck">
+        <li>Processos pouco formalizados e falhas de comunicação.</li>
+        <li>Decisões centralizadas e fragilidade financeira.</li>
+        <li>Baixa integração entre equipes e estrutura insuficiente.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ct2" style="color:var(--green)">O - Opportunities (Oportunidades)</div>
+      <ul class="ck">
+        <li>Formalizar processos e implantar indicadores.</li>
+        <li>Organizar fluxo de caixa, precificação e expansão de portfólio.</li>
+        <li>Capacitar equipes e reforçar retenção de talentos.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ct2" style="color:#ef4444">T - Threats (Ameaças)</div>
+      <ul class="ck">
+        <li>Falhas financeiras comprometendo crescimento.</li>
+        <li>Dependência excessiva do gestor e concorrência de preço.</li>
+        <li>Riscos tributários, trabalhistas e falta de abastecimento.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 3 - RECOMENDAÇÕES -->
+<section class="sec" id="recomendacoes">
+  <div class="sec-ey"><div class="sec-line"></div><div class="sec-tag">PLANO DE AÇÃO</div></div>
+  <h2 class="sec-title">Principais <span>Recomendações</span></h2>
+  <p class="sec-desc">Eixos estratégicos para sustentar a fase de Crescimento da empresa, formalizando a gestão.</p>
+  
+  <div class="cards c3">
+    <div class="card card-al">
+      <div class="ct2">Gestão Financeira</div>
+      <div class="cb">Revisar parametrização, implantar DRE gerencial, criar planejamento com metas e integrar contabilidade à operação.</div>
+    </div>
+    <div class="card card-al">
+      <div class="ct2">Processos & Arquitetura</div>
+      <div class="cb">Formalizar documentação, implantar checklists de expedição, integrar setores e criar indicadores operacionais.</div>
+    </div>
+    <div class="card card-al">
+      <div class="ct2">Comercial & Times</div>
+      <div class="cb">Revisar precificação, monitorar conversões. Fortalecer responsabilização, capacitar lideranças e criar rituais de alinhamento.</div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 4 - OPENCODE SLIDES -->
+<section class="sec" id="slides">
+  <div class="sec-ey"><div class="sec-line"></div><div class="sec-tag">APRESENTAÇÃO INTERATIVA</div></div>
+  <h2 class="sec-title">Slides <span>Visuais</span></h2>
+  <p class="sec-desc">Abaixo está o espaço reservado para a integração dos slides gerados pela inteligência artificial. Eles estarão disponíveis na pasta <code>opencode/slide</code>.</p>
+  
+  <div class="alert alert-teal">
+    <span class="alert-icon">🤖</span>
+    <div class="alert-body"><strong>Atenção Opencode:</strong> Insira o arquivo `index.html` da apresentação gerada dentro do diretório <code>apresentacao/opencode/slide/</code>.</div>
+  </div>
+
+  <iframe src="../opencode/slide/index.html" class="opencode-frame" title="Apresentação Interativa" onerror="this.outerHTML='<div class=\'opencode-frame\' style=\'display:flex;align-items:center;justify-content:center;color:var(--muted);\'>Aguardando geração dos slides pelo Opencode...</div>'"></iframe>
+</section>
+
+</main>
+</body>
+</html>

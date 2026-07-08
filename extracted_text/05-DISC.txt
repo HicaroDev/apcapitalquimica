@@ -1,0 +1,188 @@
+﻿>DIAGNÓSTICO EMPRESARIAL
+RELATÓRIO DE ANÁLISE DISC
+
+Empresa: Capital Química Indústria e Comércio de Produtos Químicos LTDA
+CNPJ: 23.202.193/0001-69
+Consultoria: R&V Consultores Associados
+
+INTRODUÇÃO
+A ferramenta DISC é utilizada para compreender tendências comportamentais no ambiente profissional a partir de quatro fatores: Dominância (D), Influência (I), Estabilidade (S) e Conformidade (C).
+
+A leitura desses fatores permite identificar preferências relacionadas à tomada de decisão, comunicação, ritmo de trabalho, reação a mudanças, relacionamento com regras e interação com outras pessoas. No contexto empresarial, o DISC não mede competência técnica, desempenho ou potencial isoladamente; sua contribuição está em oferecer subsídios para uma gestão de pessoas mais aderente às características comportamentais da equipe.
+
+Na Capital Química, a análise foi contextualizada às demandas das áreas Comercial, Administrativa, Recursos Humanos, Produção, Logística e Expedição, considerando a necessidade de integração entre atendimento, organização interna, execução operacional, movimentação de mercadorias e cumprimento de padrões de trabalho.
+
+OBJETIVO
+O presente relatório tem como objetivo analisar a composição comportamental da equipe da Capital Química, identificando:
+A predominância dos fatores DISC individuais e coletivos;
+A aderência comportamental entre os colaboradores e as funções exercidas;
+Pontos de equilíbrio e lacunas na composição das áreas;
+Possíveis impactos gerenciais sobre comunicação, processos, liderança, produtividade e integração entre setores;
+Direcionamentos técnicos iniciais para o desenvolvimento da equipe.
+
+METODOLOGIA
+A análise foi desenvolvida a partir dos resultados individuais do instrumento DISC aplicado aos colaboradores da Capital Química.
+
+A interpretação considerou:
+As pontuações de Dominância, Influência, Estabilidade e Conformidade;
+A intensidade indicada para cada fator;
+A composição do perfil com base nas duas maiores pontuações;
+A inclusão de um terceiro fator quando houve empate na segunda maior pontuação;
+A relação entre o perfil identificado, o cargo exercido e as demandas comportamentais esperadas em cada área.
+Foram analisados 13 colaboradores distribuídos entre Comercial, Administrativo, Recursos Humanos, Produção, Logística e Expedição.
+
+ANÁLISES
+IDENTIFICAÇÃO DE PERFIS INDIVIDUAIS E COLETIVOS
+
+Colaborador
+Cargo
+Perfil Composto
+Alessandra Lopes Cruvinel
+Coordenadora de Vendas
+Planejador Comunicador
+Bruna Vendeth de Souza
+Assistente de Vendas
+Comunicador Planejador
+Daniel Augusto Ayres da Silva
+Motorista
+Comunicador Analista
+Edivaldo Raimundo da Silva
+Encarregado de Produção
+Executor Comunicador Planejador
+Fernanda Bruna de Oliveira
+Auxiliar Administrativo
+Comunicador Analista
+João Vitor da Silva
+Auxiliar de Produção
+Planejador Analista
+Juliana Cardoso Assis
+Analista de Recursos Humanos
+Planejador Analista
+Maria Luiza Vitalino Campos
+Assistente de Vendas
+Analista Comunicador
+Marilene
+Vendedora
+Analista Executor
+Mario Hilario
+Auxiliar de Produção
+Planejador Comunicador
+Mateus Souza da Silva
+Motorista
+Analista Executor
+Maykon Douglas de Oliveira Lima
+Auxiliar de Produção
+Analista Planejador
+Renan de Oliveira Freitas
+Expedidor de Mercadorias
+Comunicador Executor Analista
+
+A composição da equipe demonstra presença relevante de Influência (I), Estabilidade (S) e Conformidade (C) entre os perfis predominantes. Isso indica um grupo com potencial para relacionamento, cooperação, continuidade de rotinas e atenção a padrões, porém com menor concentração de perfis naturalmente orientados à imposição, confronto, decisão rápida e aceleração de mudanças.
+Os fatores aparecem entre as duas maiores pontuações dos perfis da seguinte forma:
+Conformidade (C): presente em 9 perfis;
+Influência (I): presente em 8 perfis;
+Estabilidade (S): presente em 7 perfis;
+Dominância (D): presente em 4 perfis.
+
+Esse resultado evidencia uma equipe mais orientada à comunicação, à estabilidade e ao cuidado com processos do que à pressão por resultado ou à decisão imediata. Em uma empresa que possui áreas comerciais e operacionais interdependentes, esse cenário favorece cooperação e qualidade, mas exige mecanismos formais de priorização, acompanhamento e responsabilização.
+
+LEITURA DE ADERÊNCIA ENTRE PERFIL E FUNÇÃO:
+
+COMERCIAL: há boa presença de perfis Comunicadores e Planejadores, especialmente em Alessandra e Bruna, o que é aderente a atividades que exigem relacionamento, acompanhamento de clientes e continuidade de negociações. Maria Luiza apresenta perfil Analista Comunicador, contribuindo para uma atuação comercial com maior atenção a informações e organização. Marilene possui perfil Analista Executor, o que pode favorecer objetividade, foco em critérios e ação comercial mais direta.
+
+ADMINISTRATIVO E RH: Fernanda apresenta perfil Comunicador Analista, combinando comunicação e atenção a informações. Juliana possui perfil Planejador Analista, aderente a rotinas que demandam consistência, organização documental, confidencialidade e observância de procedimentos.
+
+PRODUÇÃO: João Vitor e Maykon apresentam perfis com predominância de Estabilidade e Conformidade, aderentes a ambientes que exigem cumprimento de padrão, repetição de rotina, atenção à execução e redução de falhas. Mario possui perfil Planejador Comunicador, contribuindo para uma atuação mais cooperativa dentro da operação. Edivaldo, encarregado de produção, apresenta maior pontuação em Dominância, seguida por empate entre Influência e Estabilidade, porém com todas as intensidades classificadas como baixas. Esse resultado exige cautela interpretativa e validação por observação gerencial, pois indica baixa intensidade geral dos fatores, não permitindo conclusões definitivas sobre seu estilo de liderança apenas a partir do DISC.
+
+LOGÍSTICA E EXPEDIÇÃO: Daniel apresenta perfil Comunicador Analista, Mateus perfil Analista Executor e Renan perfil Comunicador Executor Analista. A composição é complementar: há potencial de comunicação, atenção a procedimentos, objetividade e resposta a demandas. Entretanto, a integração entre esses perfis dependerá de processos claros, comunicação objetiva de prioridades e definição de responsabilidades na movimentação e liberação de mercadorias.
+
+ANÁLISE POR ÁREA/SETOR
+
+COMERCIAL
+Colaboradoras: Alessandra, Bruna, Maria Luiza e Marilene.
+A área comercial reúne perfis com forte presença de Influência, combinada a Estabilidade, Conformidade e Dominância em diferentes proporções. Essa configuração é positiva para relacionamento com clientes, atendimento, comunicação, acompanhamento de demandas e construção de confiança comercial.
+A coordenadora de vendas, Alessandra, apresenta perfil Planejador Comunicador, combinando estabilidade com capacidade de relacionamento. Esse perfil tende a favorecer uma liderança comercial mais próxima da equipe, com foco em continuidade, acompanhamento e manutenção de vínculos. O ponto de atenção está na necessidade de garantir que a busca por harmonia e estabilidade não reduza a firmeza em cobranças, metas, priorização de oportunidades e correção de desvios.
+Bruna apresenta perfil Comunicador Planejador, aderente ao suporte comercial e ao relacionamento com clientes. Há potencial para interação, acompanhamento e manutenção de fluxo de informações, desde que as rotinas de registro, retorno e controle de pendências sejam estruturadas.
+Maria Luiza apresenta perfil Analista Comunicador, contribuindo para uma atuação comercial mais criteriosa e organizada. Esse perfil pode ser importante para apoio em propostas, registros, acompanhamento de solicitações e conferência de informações, desde que receba orientações claras sobre prioridades e critérios de decisão.
+Marilene apresenta perfil Analista Executor, com maior potencial para atuação comercial objetiva, foco em solução e condução mais direta de negociações. O risco está na possibilidade de uma comunicação excessivamente racional ou orientada ao resultado, especialmente quando o cliente demanda maior escuta, vínculo e consultoria.
+Impacto gerencial: a área possui diversidade suficiente para equilibrar relacionamento, organização e objetividade. Porém, sem indicadores comerciais, rotina de follow-up, critérios de priorização e registro das interações, a forte presença de perfis comunicadores pode gerar dependência de memória, perda de oportunidades e baixa previsibilidade da operação comercial.
+
+ADMINISTRATIVO E RECURSOS HUMANOS
+Colaboradoras: Fernanda e Juliana.
+Fernanda apresenta perfil Comunicador Analista. Essa combinação pode favorecer a interação com outras áreas, o esclarecimento de demandas e a condução de atividades que exigem comunicação, registro e conferência de informações. Para gerar resultado, é importante que o trabalho esteja sustentado por rotinas, fluxos e responsáveis definidos, evitando dispersão entre demandas simultâneas.
+Juliana apresenta perfil Planejador Analista, com alta Estabilidade e Conformidade. O perfil demonstra boa aderência às demandas típicas de Recursos Humanos, especialmente em atividades que exigem controle, documentação, confidencialidade, padronização e acompanhamento recorrente.
+Impacto gerencial: a composição do setor é favorável à estruturação de controles administrativos e de pessoas. Contudo, a área pode apresentar ritmo mais cauteloso diante de urgências, mudanças abruptas ou decisões sem padrão previamente definido. A liderança deve assegurar clareza de prioridades, autonomia delimitada e processos formalizados para evitar paralisação ou retrabalho.
+
+PRODUÇÃO
+Colaboradores: Edivaldo, João Vitor, Mario e Maykon.
+A área de produção possui presença relevante de perfis Planejadores e Analistas, especialmente em João Vitor e Maykon. Essa composição favorece execução padronizada, atenção às etapas, constância e maior aderência a procedimentos técnicos.
+João Vitor apresenta perfil Planejador Analista, com Estabilidade como fator predominante. Esse perfil tende a responder melhor a rotinas claras, padrão de execução, orientação objetiva e acompanhamento previsível.
+Maykon apresenta perfil Analista Planejador, com Conformidade e Estabilidade em alta intensidade. É o perfil mais aderente da área para atividades que envolvam cumprimento rigoroso de procedimentos, conferência, prevenção de falhas e manutenção de padrões.
+Mario apresenta perfil Planejador Comunicador, trazendo maior capacidade de relacionamento e cooperação para a rotina produtiva. Pode contribuir para integração entre colegas, desde que haja foco e direcionamento claro de tarefas.
+Edivaldo, como encarregado de produção, apresenta pontuações baixas em todos os fatores, ainda que a maior seja em Dominância. Esse resultado não permite classificá-lo como um perfil naturalmente executor em intensidade elevada. O dado indica necessidade de complementar a análise com observação prática da liderança, percepção da equipe, aderência técnica ao cargo e avaliação do nível de autonomia efetivamente exercido na produção.
+Impacto gerencial: a área possui potencial para aderir a processos e padrões, mas a capacidade de condução da rotina dependerá da clareza da liderança operacional. Caso o encarregado não exerça uma atuação estruturadora, a produção pode manter-se dependente de orientações externas, ter baixa autonomia na resolução de problemas e apresentar dificuldade em sustentar disciplina operacional.
+
+LOGÍSTICA E EXPEDIÇÃO
+Colaboradores: Daniel, Mateus e Renan.
+Daniel apresenta perfil Comunicador Analista, o que pode favorecer comunicação com áreas internas, atenção a informações e necessidade de compreensão dos procedimentos antes da execução. O perfil pode responder melhor quando rotas, documentos, orientações de entrega e responsabilidades forem definidos de forma objetiva.
+Mateus possui perfil Analista Executor, combinando atenção a critérios com capacidade de ação. Esse perfil pode contribuir para atividades que exigem decisão prática, cumprimento de orientações, conferência e resposta a ocorrências operacionais.
+Renan apresenta perfil Comunicador Executor Analista, com Influência predominante e empate entre Dominância e Conformidade na segunda posição. É um perfil potencialmente versátil para a expedição, combinando comunicação, resposta a demandas e atenção a procedimentos. No entanto, essa combinação exige clareza sobre prioridades, para que a comunicação e a agilidade não substituam controles formais de conferência e liberação.
+Impacto gerencial: a equipe possui elementos comportamentais favoráveis para integração entre transporte, expedição e áreas internas. O principal risco não está no perfil individual, mas na ausência de rotinas operacionais claras que definam conferência, responsabilidade, registro, tratativa de divergências e comunicação entre setores.
+
+PONTOS FORTES E PONTOS CRÍTICOS
+
+PONTOS FORTES IDENTIFICADOS
+Boa presença de perfis comunicadores: favorece relacionamento comercial, integração entre áreas e circulação de informações.
+Presença relevante de Conformidade: contribui para atenção a critérios, registros, padrões e necessidade de processos claros.
+Estabilidade concentrada em áreas administrativas e produtivas: favorece continuidade de rotina, repetição disciplinada e manutenção de padrão.
+Diversidade entre perfis comerciais: há equilíbrio entre relacionamento, organização e objetividade, evitando que a área dependa de uma única característica comportamental.
+Boa aderência dos perfis Planejador e Analista à produção e ao RH: há compatibilidade comportamental com atividades que exigem controle, método, rotina e redução de falhas.
+
+PONTOS CRÍTICOS IDENTIFICADOS
+Baixa presença de Dominância como fator predominante: pode reduzir a velocidade de decisão, a cobrança por resultado e a atuação mais firme diante de desvios, atrasos ou conflitos.
+Risco de excesso de comunicação sem formalização: em uma equipe com forte presença de Influência, informações podem circular bem informalmente, mas se perder quando não são registradas em sistemas, controles ou procedimentos.
+Dependência de liderança estruturadora na produção: o perfil DISC do encarregado não permite concluir alta intensidade de liderança comportamental. Isso exige validação prática da função e reforço de mecanismos de gestão da operação.
+Possível dificuldade de adaptação a mudanças sem preparação: a presença relevante de Estabilidade e Conformidade pode favorecer qualidade, mas também aumentar resistência ou lentidão diante de alterações não planejadas.
+Risco de retrabalho entre Comercial, Produção e Expedição: sem definição clara de fluxo, responsáveis e critérios de conferência, os perfis comunicadores podem resolver demandas pontualmente, mas não necessariamente eliminar a causa dos problemas.
+
+CONCLUSÃO
+A análise DISC da Capital Química evidencia uma equipe comportamentalmente diversificada, com predominância de fatores ligados à comunicação, estabilidade e conformidade. Essa composição é favorável para atividades que exigem relacionamento, colaboração, continuidade de rotinas e atenção a procedimentos.
+
+A área Comercial possui características positivas para atendimento e relacionamento, mas precisa de maior estrutura de controle comercial para transformar interação em previsibilidade de resultados. Administrativo e Recursos Humanos demonstram boa aderência a atividades de organização, documentação e padronização. Na Produção, há presença de perfis compatíveis com execução disciplinada, mas a liderança operacional precisa ser observada e fortalecida para assegurar autonomia, ritmo e controle da rotina. Logística e Expedição possuem perfis complementares, porém dependem de processos claramente definidos para evitar falhas de comunicação e retrabalho.
+
+O principal achado não está em uma incompatibilidade ampla entre perfis e funções, mas na necessidade de transformar características comportamentais positivas em capacidade de gestão. Sem processos, indicadores, responsabilidades formais e rituais de acompanhamento, a equipe pode operar com boa disposição e relacionamento, porém com baixa consistência gerencial.
+
+
+Goiânia/GO, 08 de Julho de 2026.
+
+
+
+
+____________________________________
+Raiane da Cruz Vieira
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+
+
+
+____________________________________
+Stela Anizia Rodrigues Alves
+Consultora Responsável
+Rodrigues & Vieira Consultores Associados
+
+
+
+
+
+
+____________________________________
+Eduardo Augusto de Campos Vaz
+Sócio Administrador
+Capital Química Indústria e Comércio de Produtos Químicos LTDA
+
