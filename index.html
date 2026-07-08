@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Capital Química — Apresentação Executiva</title>
+    <script src="assets/vendor/tailwind.js"></script>
+    <link href="assets/vendor/aos.css" rel="stylesheet">
+    <script src="assets/vendor/aos.js"></script>
+    <script src="assets/vendor/lucide.js"></script>
+    <script src="assets/vendor/d3.v7.min.js"></script>
+    <link href="assets/vendor/inter.css" rel="stylesheet">
+    <style>
+        /* @MIRA:THEME:START */
+/* MIRA THEME: light-minimal
+   Fundo claro, tipografia escura, laranja como acento pontual.
+   Para ambientes corporativos com projetor fraco ou impressão. */
+:root {
+    --mira-primary: #052A5E;
+    --mira-bg: #FAFAF7;
+    --mira-text: #1A1A1A;
+    --mira-text-soft: rgba(26, 26, 26, 0.72);
+    --mira-text-softer: rgba(26, 26, 26, 0.50);
+    --mira-card-bg: rgba(255, 255, 255, 0.85);
+    --mira-card-border: rgba(0, 0, 0, 0.08);
+    --mira-glow-soft: rgba(5, 42, 94, 0.10);
+    --mira-glow-strong: rgba(5, 42, 94, 0.18);
+    --mira-icon-bg: rgba(5, 42, 94, 0.12);
+    --mira-icon-border: rgba(5, 42, 94, 0.30);
+    --mira-pill-bg: rgba(0, 0, 0, 0.03);
+    --mira-pill-border: rgba(0, 0, 0, 0.08);
+    --mira-stage-glow: rgba(5, 42, 94, 0.05);
+    --mira-accent-2: #5D7596;
+    --mira-gold: #9A7B4F;
+}
+
+
+/* ============================================================
+   MIRA — base.css
+   Estrutura compartilhada por todos os temas.
+   Os temas definem apenas as CSS variables (--mira-*).
+   ============================================================ */
+
+body {
+    background: var(--mira-bg);
+    min-height: 100vh;
+    color: var(--mira-text);
+    font-family: 'Inter', sans-serif;
+}
+
+.primary-color { color: var(--mira-primary); }
+.primary-bg { background: var(--mira-primary); }
+.gold-color { color: var(--mira-gold); }
+.gold-bg { background: var(--mira-gold); }
+.gold-border { border-color: var(--mira-gold); }
+.accent-color { color: var(--mira-accent-2); }
+.hover-card { transition: all 0.25s ease; }
+.hover-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px var(--mira-glow-strong); }
+
+.glass-card {
+    background: var(--mira-card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--mira-card-border);
+    box-shadow: 0 10px 30px var(--mira-glow-soft);
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--mira-glow-strong);
+}
+
+.icon-hero {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    background: var(--mira-icon-bg);
+    border: 1px solid var(--mira-icon-border);
+}
+
+.attribute-pill {
+    background: var(--mira-pill-bg);
+    border: 1px solid var(--mira-pill-border);
+    transition: all 0.25s ease;
+    border-radius: 9999px;
+}
+
+.attribute-pill:hover {
+    background: var(--mira-icon-bg);
+    border-color: var(--mira-icon-border);
+    transform: translateY(-3px);
+}
+
+/* Palco de animação D3 — tamanho padrão do canvas */
+.anim-stage {
+    width: 100%;
+    height: clamp(400px, 60vh, 620px);
+    background: radial-gradient(circle at 50% 50%, var(--mira-stage-glow), transparent 70%);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.anim-stage svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.replay-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    background: var(--mira-pill-bg);
+    border: 1px solid var(--mira-pill-border);
+    color: var(--mira-text-soft);
+    border-radius: 9999px;
+    padding: 6px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.replay-btn:hover {
+    background: var(--mira-icon-bg);
+    color: var(--mira-primary);
+}
+
+.text-soft { color: var(--mira-text-soft); }
+.text-softer { color: var(--mira-text-softer); }
+
+@keyframes mira-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+@keyframes mira-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes mira-gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* @MIRA:THEME:END */
+
+        /* === SIDEBAR (menu lateral) === */
+        .sidebar {
+            position: fixed; top: 0; left: 0; width: 240px; height: 100vh;
+            background: #FFFFFF; border-right: 1px solid rgba(0,0,0,0.06);
+            display: flex; flex-direction: column; z-index: 9997; overflow-y: auto;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .sidebar.closed { transform: translateX(-240px); }
+        .sb-toggle {
+            position: absolute; top: 12px; right: -36px; width: 36px; height: 36px;
+            background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08);
+            border-left: none; border-radius: 0 8px 8px 0;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 9998; color: var(--mira-primary);
+            transition: all 0.2s; font-size: 16px;
+        }
+        .sb-toggle:hover { color: var(--mira-gold); }
+        .sb-logo { padding: 22px 20px 16px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .sb-brand { font-size: 16px; font-weight: 800; letter-spacing: .08em; color: var(--mira-primary); line-height: 1.1; }
+        .sb-sub { font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: rgba(26,26,26,0.5); margin-top: 3px; }
+        .sb-badge { display: inline-block; background: rgba(154, 123, 79, 0.10); border: 1px solid rgba(154, 123, 79, 0.30); color: var(--mira-gold); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 8px; border-radius: 100px; margin-top: 8px; }
+        .nav { padding: 10px 0; flex: 1; }
+        .nav-group {
+            padding: 10px 20px 4px; font-size: 9px; font-weight: 700; letter-spacing: .15em;
+            text-transform: uppercase; color: rgba(26,26,26,0.45); cursor: pointer;
+            display: flex; align-items: center; justify-content: space-between;
+            user-select: none; transition: color 0.15s;
+        }
+        .nav-group:hover { color: var(--mira-primary); }
+        .nav-group .collapse-icon { font-size: 7px; transition: transform 0.2s; }
+        .nav-group.collapsed .collapse-icon { transform: rotate(-90deg); }
+        .nav-group.collapsed + .nav-links { display: none; }
+        .nav-links { overflow: hidden; transition: max-height 0.25s ease; }
+        .nav-link { display: flex; align-items: center; gap: 8px; padding: 7px 20px; text-decoration: none; color: rgba(26,26,26,0.6); font-size: 12px; font-weight: 500; border-left: 2px solid transparent; transition: all .15s; cursor: pointer; }
+        .nav-link:hover { color: var(--mira-primary); background: rgba(5, 42, 94, 0.04); }
+        .nav-link.active { color: var(--mira-gold); border-left-color: var(--mira-gold); background: rgba(154, 123, 79, 0.06); }
+        .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: .5; }
+        .nav-link.active .nav-dot { opacity: 1; }
+        .sb-foot { padding: 12px 20px; border-top: 1px solid rgba(0,0,0,0.06); font-size: 10px; color: rgba(26,26,26,0.4); }
+        .main-content { margin-left: 240px; min-height: 100vh; transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .sidebar.closed + .main-content { margin-left: 0; }
+
+        /* === CONTROLES DE SLIDE (passagem card-a-card) === */
+        html { scroll-behavior: smooth; }
+        html { scrollbar-width: thin; scrollbar-color: #c0c0c0 #f0f0f0; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; background: #f0f0f0; }
+        ::-webkit-scrollbar-track { background: #f0f0f0; }
+        ::-webkit-scrollbar-thumb { background: #c0c0c0; border-radius: 999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a0a0a0; }
+        ::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+
+        #mira-progress {
+            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--mira-primary), var(--mira-accent-2), var(--mira-primary));
+            background-size: 200% 100%;
+            animation: mira-shimmer 2s linear infinite;
+            z-index: 9999; transition: width 0.1s linear;
+            box-shadow: 0 0 10px var(--mira-glow-strong);
+        }
+
+        @keyframes mira-shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        #mira-next {
+            position: fixed; bottom: 32px; right: 32px;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--mira-primary); color: var(--mira-bg);
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; border: none;
+            opacity: 0; transform: translateY(20px);
+            transition: all 0.3s ease; z-index: 9998;
+            box-shadow: 0 4px 20px var(--mira-glow-strong);
+        }
+        #mira-next.visible { opacity: 1; transform: translateY(0); }
+        #mira-next:hover { transform: translateY(-3px) scale(1.1); }
+    
+/* @MIRA:RESPONSIVE:START */
+/* ============================================================
+   MIRA — responsive.css  (camada de reflow mobile-first)
+   Objetivo: TODO slide 16:9 do Mira vira legível no celular em
+   retrato SEM arquivo mobile separado. O mesmo deck se reorganiza:
+   fontes encolhem, grids empilham, padding reduz, palcos escalam.
+
+   Estratégia: os decks nascem "desktop-first" (classes Tailwind com
+   tamanhos fixos: text-6xl, p-10, ...). Esta camada sobrescreve essas
+   classes abaixo de 640px. Usa !important de propósito — precisa
+   vencer o Tailwind CDN (injetado em runtime) em decks legados sem
+   reescrever o HTML. Os clamps têm teto ~= valor desktop, então em
+   telas largas nada muda; só encolhem no estreito.
+   ============================================================ */
+
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, canvas, iframe, table, pre { max-width: 100%; }
+
+@media (max-width: 640px) {
+  .text-9xl { font-size: clamp(3rem, 12vw, 5rem)      !important; line-height: 1.05 !important; }
+  .text-8xl { font-size: clamp(2.75rem, 11vw, 4.5rem) !important; line-height: 1.06 !important; }
+  .text-7xl { font-size: clamp(2.25rem, 10vw, 3.75rem)!important; line-height: 1.08 !important; }
+  .text-6xl { font-size: clamp(2rem, 9vw, 3rem)       !important; line-height: 1.1  !important; }
+  .text-5xl { font-size: clamp(1.75rem, 8vw, 2.5rem)  !important; line-height: 1.12 !important; }
+  .text-4xl { font-size: clamp(1.5rem, 7vw, 2rem)     !important; line-height: 1.15 !important; }
+  .text-3xl { font-size: clamp(1.35rem, 6vw, 1.75rem) !important; line-height: 1.2  !important; }
+  .text-2xl { font-size: clamp(1.2rem, 5vw, 1.5rem)   !important; line-height: 1.25 !important; }
+  .text-xl  { font-size: clamp(1.05rem, 4.5vw, 1.25rem)!important; line-height: 1.3 !important; }
+
+  h1, h2, h3 { overflow-wrap: break-word; }
+
+  .p-12 { padding: 1.25rem !important; }
+  .p-10 { padding: 1.15rem !important; }
+  .p-8  { padding: 1.05rem !important; }
+  .px-12, .px-10 { padding-left: 1.15rem !important; padding-right: 1.15rem !important; }
+  .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  .gap-8 { gap: 1rem !important; }
+  .gap-10, .gap-12 { gap: 1.25rem !important; }
+
+  .min-h-screen {
+    min-height: 100dvh !important;
+    height: auto !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .min-h-screen.justify-center,
+  .min-h-screen.items-center { justify-content: flex-start !important; }
+
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr !important; }
+
+  .anim-stage {
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    min-height: 0 !important;
+  }
+
+  table { font-size: 0.82rem !important; }
+  .overflow-x-auto { -webkit-overflow-scrolling: touch; }
+
+        body > .main-content > section:first-of-type h1,
+        body > .main-content > section:first-of-type h2 {
+            text-wrap: balance;
+        }
+
+        #mira-next, #next-card {
+    bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+    right: max(1rem, env(safe-area-inset-right)) !important;
+    width: 44px !important; height: 44px !important;
+  }
+}
+/* @MIRA:RESPONSIVE:END */
+</style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <button class="sb-toggle" id="sbToggle" type="button" title="Alternar menu">◀</button>
+        <div class="sb-logo" style="padding: 22px 20px 16px;">
+            <img src="assets/logo.png" alt="Logo R&amp;V" style="width:100%;max-width:160px;margin-bottom:12px;display:block;" onerror="this.style.display='none'">
+            <div class="sb-brand">CAPITAL QUÍMICA</div>
+            <div class="sb-sub">Apresentação Executiva</div>
+            <div class="sb-badge">Diagnóstico · 2026</div>
+        </div>
+        <div class="nav">
+            <div class="nav-group" data-group="abertura">ABERTURA <span class="collapse-icon">▼</span></div>
+            <div class="nav-links" id="links-abertura">
+                <a class="nav-link active" data-target="0"><span class="nav-dot"></span>Capa</a>
+                <a class="nav-link" data-target="1"><span class="nav-dot"></span>Roteiro</a>
+            </div>
+            <div class="nav-group" data-group="diagnostico">DIAGNÓSTICO <span class="collapse-icon">▼</span></div>
+            <div class="nav-links" id="links-diagnostico">
+                <a class="nav-link" data-target="2"><span class="nav-dot"></span>VERTEX 360°</a>
+                <a class="nav-link" data-target="3"><span class="nav-dot"></span>Antes e Depois</a>
+                <a class="nav-link" data-target="4"><span class="nav-dot"></span>Forças vs Fragilidades</a>
+                <a class="nav-link" data-target="5"><span class="nav-dot"></span>SWOT</a>
+                <a class="nav-link" data-target="6"><span class="nav-dot"></span>Ciclo de Vida</a>
+            </div>
+            <div class="nav-group" data-group="estruturacao">ESTRUTURAÇÃO <span class="collapse-icon">▼</span></div>
+            <div class="nav-links" id="links-estruturacao">
+                <a class="nav-link" data-target="7"><span class="nav-dot"></span>Estratégia Empresarial</a>
+                <a class="nav-link" data-target="8"><span class="nav-dot"></span>4 Pilares</a>
+                <a class="nav-link" data-target="9"><span class="nav-dot"></span>Gestão Financeira</a>
+                <a class="nav-link" data-target="10"><span class="nav-dot"></span>Arquitetura de Processos</a>
+                <a class="nav-link" data-target="11"><span class="nav-dot"></span>Arquitetura de Times</a>
+                <a class="nav-link" data-target="12"><span class="nav-dot"></span>Inteligência Comercial</a>
+                <a class="nav-link" data-target="13"><span class="nav-dot"></span>Próximos Passos</a>
+                <a class="nav-link" data-target="14"><span class="nav-dot"></span>Encerramento</a>
+            </div>
+        </div>
+        <div class="sb-foot">Rodrigues & Vieira<br>Consultores Associados</div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div id="mira-progress"></div>
+        <button id="mira-next" aria-label="Próximo slide">
+            <i data-lucide="chevron-down" class="w-6 h-6" id="mira-next-icon"></i>
+        </button>
+
+    <!-- ===== SLIDE 1: CAPA — Magnetic Particles ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6">
+        <div id="capa-stage" class="absolute inset-0"></div>
+        <div class="relative z-10 text-center max-w-4xl" data-aos="fade-up">
+            <p class="attribute-pill inline-block px-5 py-2 text-sm tracking-widest uppercase text-soft mb-8" style="border-color:var(--mira-gold);color:var(--mira-gold)">R&V · Diagnóstico 2026</p>
+            <h1 class="text-6xl md:text-7xl font-black leading-tight mb-6">
+                Capital Química<br>
+                <span class="gold-color">O Diagnóstico que Revela o Caminho</span>
+            </h1>
+            <p class="text-xl text-soft max-w-2xl mx-auto mb-10">Resultados da etapa de diagnóstico e estruturação estratégica — uma jornada de 70 dias rumo à gestão profissional.</p>
+            <div class="flex items-center justify-center gap-3 text-softer text-sm">
+                <i data-lucide="user" class="w-4 h-4 primary-color"></i> Raiane Vieira & Stela Rodrigues
+                <span class="opacity-40">|</span>
+                <i data-lucide="calendar" class="w-4 h-4 primary-color"></i> Julho 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 2: ROTEIRO — Timeline Accordion ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-10" data-aos="fade-up">
+            <h2 class="text-5xl font-black">A Jornada em <span class="gold-color">6 Atos</span></h2>
+            <p class="text-soft text-lg mt-3">O roteiro da apresentação de diagnóstico</p>
+        </div>
+        <div class="glass-card w-full max-w-5xl p-8 relative" data-aos="fade-up">
+            <!-- @MIRA:SIZE 4/10 -->
+            <div id="roteiro-stage" class="anim-stage"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 3: VERTEX 360° — Force-Directed Network ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-10" data-aos="fade-up">
+            <h2 class="text-5xl font-black">VERTEX 360° — <span class="gold-color">4 Etapas, Uma Transformação</span></h2>
+            <p class="text-soft text-lg mt-3">O método que guia a evolução da gestão empresarial</p>
+        </div>
+        <div class="glass-card w-full max-w-5xl p-8 relative" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__vertexReplay && window.__vertexReplay()">↻ replay</button>
+            <!-- @MIRA:SIZE 4/10 -->
+            <div id="vertex-stage" class="anim-stage"></div>
+        </div>
+        <p class="text-center text-softer mt-6 max-w-2xl" data-aos="fade-up">Diagnóstico → <span class="gold-color">Apresentação e Estruturação</span> → Implementação → Acompanhamento</p>
+    </section>
+
+    <!-- ===== SLIDE 4: ANTES E DEPOIS — Balance Scale ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16 overflow-hidden" style="position:relative">
+        <div id="comparison-stage" class="absolute inset-0" style="pointer-events:none;z-index:0"></div>
+        <div class="text-center mb-12 z-10 relative" data-aos="fade-up">
+            <h2 class="text-5xl font-black">Antes e <span class="gold-color">Depois</span> da Gestão Profissional</h2>
+            <p class="text-soft text-lg mt-3">O que muda com a estruturação estratégica</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 w-full max-w-5xl items-stretch z-10 relative">
+            <div id="antes-card" class="glass-card p-10 transition-all duration-700" data-aos="fade-right">
+                <div class="icon-hero mb-6"><i data-lucide="alert-triangle" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-3xl font-bold mb-4">Antes</h3>
+                <ul class="space-y-3 text-soft">
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-5 h-5 shrink-0"></i> Decisões centralizadas na liderança</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-5 h-5 shrink-0"></i> Processos pouco formalizados</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-5 h-5 shrink-0"></i> Relatórios financeiros de baixa confiabilidade</li>
+                </ul>
+            </div>
+            <div id="depois-card" class="glass-card p-10 transition-all duration-700" data-aos="fade-left">
+                <div class="icon-hero mb-6"><i data-lucide="sparkles" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-3xl font-bold mb-4">Depois</h3>
+                <ul class="space-y-3 text-soft">
+                    <li class="flex gap-3"><i data-lucide="check" class="primary-color w-5 h-5 shrink-0"></i> Gestão descentralizada com autonomia por área</li>
+                    <li class="flex gap-3"><i data-lucide="check" class="primary-color w-5 h-5 shrink-0"></i> Processos documentados e integrados</li>
+                    <li class="flex gap-3"><i data-lucide="check" class="primary-color w-5 h-5 shrink-0"></i> DRE gerencial e planejamento financeiro</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center text-softer mt-10 max-w-2xl z-10 relative" data-aos="fade-up">A transição de um modelo reativo para uma gestão orientada a dados e melhoria contínua</p>
+    </section>
+
+    <!-- ===== SLIDE 5: FORÇAS vs FRAGILIDADES — Hanging Gauge ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16 overflow-hidden" style="position:relative">
+        <div id="balance-stage" class="absolute inset-0" style="pointer-events:none;z-index:0"></div>
+        <div class="text-center mb-12 z-10 relative" data-aos="fade-up">
+            <h2 class="text-5xl font-black">Onde a Capital já <span class="gold-color">Brilha</span> e Onde Precisa de <span class="gold-color">Apoio</span></h2>
+            <p class="text-soft text-lg mt-3">Os 7 pontos fortes e as 7 fragilidades identificadas</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 w-full max-w-5xl items-stretch z-10 relative">
+            <div id="forcas-card" class="glass-card p-10 transition-all duration-700" data-aos="fade-right">
+                <div class="icon-hero mb-6"><i data-lucide="trending-up" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-3xl font-bold mb-4">Pontos Fortes</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Demonstrações contábeis disponíveis</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Controle de estoque por ERP</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Rotina de acompanhamento financeiro</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Histórico de investimento em melhorias</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Liderança ciente dos próprios gargalos</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Crescimento percebido positivamente</li>
+                    <li class="flex gap-3"><i data-lucide="check-circle" class="primary-color w-4 h-4 shrink-0"></i> Equipe disposta a aprender e crescer</li>
+                </ul>
+            </div>
+            <div id="fragilidades-card" class="glass-card p-10 transition-all duration-700" data-aos="fade-left">
+                <div class="icon-hero mb-6"><i data-lucide="alert-octagon" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-3xl font-bold mb-4">Fragilidades</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Passivo tributário sem regularização</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Relatórios financeiros de baixa confiança</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Falhas de integração entre departamentos</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Atraso em pagamentos e sem reserva</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Capital de giro insuficiente</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Decisões centralizadas no líder</li>
+                    <li class="flex gap-3"><i data-lucide="x" class="primary-color w-4 h-4 shrink-0"></i> Responsabilidades pouco claras</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 6: SWOT — Interactive Matrix 2x2 ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16 overflow-hidden" style="position:relative">
+        <div id="swot-stage" class="absolute inset-0" style="pointer-events:none;z-index:0"></div>
+        <div class="text-center mb-10 z-10 relative" data-aos="fade-up">
+            <h2 class="text-5xl font-black">SWOT — <span class="gold-color">O Raio-X da Equipe</span></h2>
+            <p class="text-soft text-lg mt-3">Forças, Fraquezas, Oportunidades e Ameaças</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full max-w-5xl z-10 relative">
+            <div id="swot-s" class="glass-card p-6 transition-all duration-700" data-aos="zoom-in">
+                <p class="text-xs uppercase tracking-widest text-soft mb-2">S · Forças</p>
+                <ul class="space-y-1 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Ambiente tranquilo, pagamento em dia</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Liderança acessível e voltada ao crescimento</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Carteira consolidada, produtos de qualidade</li>
+                </ul>
+            </div>
+            <div id="swot-w" class="glass-card p-6 transition-all duration-700" data-aos="zoom-in" data-aos-delay="100">
+                <p class="text-xs uppercase tracking-widest text-soft mb-2">W · Fraquezas</p>
+                <ul class="space-y-1 text-sm text-soft">
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Processos pouco formalizados</li>
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Falhas de comunicação entre áreas</li>
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Decisões centralizadas</li>
+                </ul>
+            </div>
+            <div id="swot-o" class="glass-card p-6 transition-all duration-700" data-aos="zoom-in" data-aos-delay="200">
+                <p class="text-xs uppercase tracking-widest text-soft mb-2">O · Oportunidades</p>
+                <ul class="space-y-1 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Formalizar processos e implantar KPIs</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Organizar fluxo de caixa e precificação</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Capacitar equipes e reter talentos</li>
+                </ul>
+            </div>
+            <div id="swot-t" class="glass-card p-6 transition-all duration-700" data-aos="zoom-in" data-aos-delay="300">
+                <p class="text-xs uppercase tracking-widest text-soft mb-2">T · Ameaças</p>
+                <ul class="space-y-1 text-sm text-soft">
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Falhas financeiras comprometendo crescimento</li>
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Dependência do gestor principal</li>
+                    <li class="flex gap-2"><span class="primary-color">▸</span> Riscos tributários e concorrência de preço</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 7: CICLO DE VIDA — Donut + Cards (ENRIQUECIDO) ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black">Setor Maduro, <span class="gold-color">Empresa em Crescimento</span></h2>
+            <p class="text-soft text-lg mt-3">Ciclo de vida do setor, da empresa e maturidade da gestão</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-5 gap-5 items-stretch" data-aos="fade-up">
+            <div class="md:col-span-3 grid gap-3 content-start">
+                <div class="glass-card p-4" style="border-left:3px solid var(--mira-gold);">
+                    <p class="text-xs uppercase tracking-widest gold-color font-bold mb-1">Setor — Maturidade</p>
+                    <p class="text-sm text-soft leading-relaxed">Setor com predominância de Maturidade, marcado por alta exigência técnica, regulatória e competitiva. Há oportunidades de crescimento em nichos de produtos especializados, sustentáveis e de maior valor agregado. Eficiência operacional, confiabilidade no fornecimento e atendimento técnico são diferenciais estratégicos.</p>
+                </div>
+                <div class="glass-card p-4" style="border-left:3px solid var(--mira-primary);">
+                    <p class="text-xs uppercase tracking-widest primary-color font-bold mb-1">Empresa — Crescimento</p>
+                    <p class="text-sm text-soft leading-relaxed">Empresa na fase de Crescimento, com operação estruturada, equipe formada e atuação em Goiás e outros estados. Já possui controles operacionais, como estoque, e capacidade comercial consolidada no segmento de distribuição e fracionamento de produtos químicos. Apresenta fragilidades na gestão financeira e tributária, com necessidade de maior integração entre estoque, vendas, financeiro e controles gerenciais.</p>
+                </div>
+                <div class="glass-card p-4" style="border-left:3px solid var(--mira-accent-2);">
+                    <p class="text-xs uppercase tracking-widest accent-color font-bold mb-1">Gestão — Baixa a Moderada</p>
+                    <p class="text-sm text-soft leading-relaxed">A empresa apresenta maturidade geral baixa a moderada, com operação comercial e operacional já estabelecida. Há necessidade de fortalecer os controles financeiros, fiscais e a estrutura de gestão de pessoas. A formalização de processos, indicadores e responsabilidades será essencial para sustentar o crescimento com maior previsibilidade.</p>
+                </div>
+            </div>
+            <div class="md:col-span-2 glass-card p-3 relative flex items-center justify-center">
+                <button class="replay-btn" onclick="window.__cicloReplay && window.__cicloReplay()">↻ replay</button>
+                <div id="ciclo-stage" class="anim-stage" style="height:clamp(260px,42vh,380px);"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 8: ESTRATÉGIA EMPRESARIAL — Modelo de Negócio ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">Estratégia Empresarial</span></h2>
+            <p class="text-soft text-lg mt-3">Estruturar o Planejamento Estratégico da Empresa</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-6 items-stretch" data-aos="fade-up">
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="target" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-xl font-bold primary-color mb-3">Comunicação Estratégica</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Confirmar missão, visão e valores organizacionais</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Apresentar objetivos estratégicos e planejamento de ações</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Alinhar toda a equipe aos direcionamentos da empresa</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="compass" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-xl font-bold primary-color mb-3">Modelo de Negócio</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Mapear o Modelo de Negócio atual da Capital Química</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Alinhar a Proposta de Valor ao mercado</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Definir canais, clientes e fontes de receita</li>
+                </ul>
+            </div>
+        </div>
+        <div class="glass-card w-full max-w-4xl p-4 mt-6 relative" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__estrategiaReplay && window.__estrategiaReplay()">↻ replay</button>
+            <div id="estrategia-stage" class="anim-stage" style="height:clamp(200px,30vh,300px);"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 9: 4 PILARES — Radar + Cards (ENRIQUECIDO) ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">4 Pilares</span> para Sustentar o Crescimento</h2>
+            <p class="text-soft text-lg mt-3">Os eixos estratégicos que estruturarão a Capital Química</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-5 gap-5 items-stretch" data-aos="fade-up">
+            <div class="md:col-span-3 grid grid-cols-2 gap-3 content-start">
+                <div class="glass-card p-4 cursor-pointer hover-card" data-pilar="0" onclick="window.__highlightPilar && window.__highlightPilar(0)">
+                    <p class="text-xs uppercase tracking-widest gold-color font-bold mb-1">Gestão Financeira</p>
+                    <p class="text-xs text-soft">Revisar sistemas, estruturar DRE gerencial, organizar capital de giro, formalizar metas e KPIs financeiros integrados à operação</p>
+                </div>
+                <div class="glass-card p-4 cursor-pointer hover-card" data-pilar="1" onclick="window.__highlightPilar && window.__highlightPilar(1)">
+                    <p class="text-xs uppercase tracking-widest primary-color font-bold mb-1">Arquitetura de Processos</p>
+                    <p class="text-xs text-soft">Atualizar documentação, implantar checklists, padronizar recebimento, produção, fracionamento, expedição e criar indicadores operacionais</p>
+                </div>
+                <div class="glass-card p-4 cursor-pointer hover-card" data-pilar="2" onclick="window.__highlightPilar && window.__highlightPilar(2)">
+                    <p class="text-xs uppercase tracking-widest accent-color font-bold mb-1">Arquitetura de Times</p>
+                    <p class="text-xs text-soft">Formalizar responsabilidades, capacitar equipes, desenvolver liderança operacional e criar rituais de alinhamento entre Comercial, Produção, Logística e Expedição</p>
+                </div>
+                <div class="glass-card p-4 cursor-pointer hover-card" data-pilar="3" onclick="window.__highlightPilar && window.__highlightPilar(3)">
+                    <p class="text-xs uppercase tracking-widest gold-color font-bold mb-1">Inteligência Comercial</p>
+                    <p class="text-xs text-soft">Revisar precificação por custo, monitorar conversão e inadimplência, implantar indicadores comerciais e integrar dados ao financeiro</p>
+                </div>
+            </div>
+            <div class="md:col-span-2 glass-card p-3 relative flex items-center justify-center">
+                <div id="pilares-stage" class="anim-stage" style="height:clamp(260px,42vh,380px);"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 10: GESTÃO FINANCEIRA — Bar Chart + Ações (ENRIQUECIDO) ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black">Colocando as <span class="gold-color">Finanças no Rumo Certo</span></h2>
+            <p class="text-soft text-lg mt-3">Gestão Financeira Estratégica — ações prioritárias</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-5 gap-5 items-stretch" data-aos="fade-up">
+            <div class="md:col-span-2 order-2 md:order-1 glass-card p-3 relative flex items-center justify-center">
+                <button class="replay-btn" onclick="window.__financasReplay && window.__financasReplay()">↻ replay</button>
+                <div id="financas-stage" class="anim-stage" style="height:clamp(260px,42vh,380px);"></div>
+            </div>
+            <div class="md:col-span-3 order-1 md:order-2 grid gap-3 content-start">
+                <div class="glass-card p-3 flex items-start gap-3 cursor-pointer hover-card" data-acao="0">
+                    <span class="gold-color font-black text-lg shrink-0 mt-0.5">01</span>
+                    <div><p class="text-sm font-bold primary-color">Revisar Sistemas Contábeis</p><p class="text-xs text-soft">Revisar parametrização dos sistemas e classificações financeiras para gerar dados confiáveis</p></div>
+                </div>
+                <div class="glass-card p-3 flex items-start gap-3 cursor-pointer hover-card" data-acao="1">
+                    <span class="gold-color font-black text-lg shrink-0 mt-0.5">02</span>
+                    <div><p class="text-sm font-bold primary-color">Estruturar DRE Gerencial</p><p class="text-xs text-soft">Estruturar controles, conciliações, fechamento mensal e demonstrativo gerencial de lucratividade</p></div>
+                </div>
+                <div class="glass-card p-3 flex items-start gap-3 cursor-pointer hover-card" data-acao="2">
+                    <span class="gold-color font-black text-lg shrink-0 mt-0.5">03</span>
+                    <div><p class="text-sm font-bold primary-color">Organizar Capital de Giro</p><p class="text-xs text-soft">Formalizar cálculo e acompanhamento da necessidade de capital de giro, integrando prazos de recebimento e pagamentos</p></div>
+                </div>
+                <div class="glass-card p-3 flex items-start gap-3 cursor-pointer hover-card" data-acao="3">
+                    <span class="gold-color font-black text-lg shrink-0 mt-0.5">04</span>
+                    <div><p class="text-sm font-bold primary-color">Criar Metas e KPIs</p><p class="text-xs text-soft">Estruturar meta de faturamento para 2026 com metas mensais, indicadores e responsáveis</p></div>
+                </div>
+                <div class="glass-card p-3 flex items-start gap-3 cursor-pointer hover-card" data-acao="4">
+                    <span class="gold-color font-black text-lg shrink-0 mt-0.5">05</span>
+                    <div><p class="text-sm font-bold primary-color">Integrar Informações</p><p class="text-xs text-soft">Integrar financeiro, contabilidade e operação para leitura unificada do resultado</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 11: ARQUITETURA DE PROCESSOS ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">Arquitetura de Processos</span></h2>
+            <p class="text-soft text-lg mt-3">Documentação, checklists, padronização e indicadores</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-6 items-stretch" data-aos="fade-up">
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="file-text" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Documentação Operacional</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Atualizar e formalizar documentação existente</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Elaborar organograma e mapear processos</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Formalizar fluxos de compras, estoque, produção, expedição e pós-venda</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="check-square" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Controles e Indicadores</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Implantar checklists operacionais e controle de expedição</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Padronizar recebimento, produção, fracionamento e conferência</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Criar indicadores operacionais e gerenciais</li>
+                </ul>
+            </div>
+        </div>
+        <div class="glass-card w-full max-w-4xl p-4 mt-6 relative" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__processosReplay && window.__processosReplay()">↻ replay</button>
+            <div id="processos-stage" class="anim-stage" style="height:clamp(200px,30vh,300px);"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 12: ARQUITETURA DE TIMES ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">Arquitetura de Times</span></h2>
+            <p class="text-soft text-lg mt-3">Responsabilidades, capacitação, liderança e rituais</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-6 items-stretch" data-aos="fade-up">
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="users" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Liderança e Equipes</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Formalizar responsabilidades de liderança e equipes</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Fortalecer regras de conduta, feedback e responsabilização</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Desenvolver liderança operacional e comunicação intersetorial</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="award" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Capacitação e Alinhamento</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Capacitar equipes em processos, ferramentas e gestão</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Revisar cargos, funções e critérios de evolução profissional</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Criar rituais de alinhamento entre Comercial, Produção, Logística e Expedição</li>
+                </ul>
+            </div>
+        </div>
+        <div class="glass-card w-full max-w-4xl p-4 mt-6 relative" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__timesReplay && window.__timesReplay()">↻ replay</button>
+            <div id="times-stage" class="anim-stage" style="height:clamp(200px,30vh,300px);"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 13: INTELIGÊNCIA COMERCIAL ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">Inteligência Comercial</span></h2>
+            <p class="text-soft text-lg mt-3">Precificação, conversão, inadimplência e indicadores</p>
+        </div>
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-6 items-stretch" data-aos="fade-up">
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="trending-up" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Precificação e Margens</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Revisar precificação conforme custos e rentabilidade</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Conectar precificação à lucratividade real por produto</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Criar leitura integrada entre preço, margem e capital de giro</li>
+                </ul>
+            </div>
+            <div class="glass-card p-6">
+                <div class="icon-hero mb-4"><i data-lucide="bar-chart" class="primary-color w-6 h-6"></i></div>
+                <h3 class="text-lg font-bold primary-color mb-3">Indicadores e Expansão</h3>
+                <ul class="space-y-2 text-sm text-soft">
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Monitorar taxa de conversão, ticket e inadimplência</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Implantar indicadores comerciais e integrar ao financeiro</li>
+                    <li class="flex gap-2"><span class="gold-color">▸</span> Estruturar expansão com presença digital e campanhas</li>
+                </ul>
+            </div>
+        </div>
+        <div class="glass-card w-full max-w-4xl p-4 mt-6 relative" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__comercialReplay && window.__comercialReplay()">↻ replay</button>
+            <div id="comercial-stage" class="anim-stage" style="height:clamp(200px,30vh,300px);"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 14: PRÓXIMOS PASSOS — Timeline Progress (ENRIQUECIDO) ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center px-6 py-16">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-5xl font-black"><span class="gold-color">Validação → Estruturação → Implementação</span></h2>
+            <p class="text-soft text-lg mt-3">Os três passos que transformam diagnóstico em resultado</p>
+        </div>
+        <div class="w-full max-w-4xl grid md:grid-cols-3 gap-5" data-aos="fade-up">
+            <div class="glass-card p-6 text-center cursor-pointer hover-card passo-card" data-passo="0">
+                <div class="w-12 h-12 rounded-full bg-primary-color/10 flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="clipboard-check" class="primary-color w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold primary-color mb-2">Validação</h3>
+                <p class="text-sm text-soft">Dos relatórios do diagnóstico com a liderança, ajuste de premissas e consolidação dos achados</p>
+            </div>
+            <div class="glass-card p-6 text-center cursor-pointer hover-card passo-card" data-passo="1">
+                <div class="w-12 h-12 rounded-full bg-gold-color/10 flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="building" class="gold-color w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold gold-color mb-2">Estruturação</h3>
+                <p class="text-sm text-soft">Criação do Planejamento Estratégico com objetivos, metas, indicadores e plano de ação detalhado</p>
+            </div>
+            <div class="glass-card p-6 text-center cursor-pointer hover-card passo-card" data-passo="2">
+                <div class="w-12 h-12 rounded-full bg-accent-color/10 flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="rocket" class="accent-color w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold accent-color mb-2">Implementação</h3>
+                <p class="text-sm text-soft">Apresentação para a equipe, início do desenvolvimento e acompanhamento contínuo dos resultados</p>
+            </div>
+        </div>
+        <div class="glass-card w-full max-w-4xl p-4 relative mt-5" data-aos="fade-up">
+            <button class="replay-btn" onclick="window.__passosReplay && window.__passosReplay()">↻ replay</button>
+            <div id="passos-stage" class="anim-stage" style="height:clamp(120px,18vh,160px);"></div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 15: ENCERRAMENTO — Constellation + Contatos (ENRIQUECIDO) ===== -->
+    <section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-6">
+        <div class="cta2-breathe absolute inset-0 pointer-events-none"></div>
+        <div id="cta2-stage" class="absolute inset-0" style="z-index:5;pointer-events:auto"></div>
+        <div class="relative z-10 text-center max-w-3xl" data-aos="zoom-in">
+            <div class="icon-hero mx-auto mb-8" style="width:72px;height:72px;border-radius:20px;">
+                <i data-lucide="handshake" class="primary-color w-9 h-9"></i>
+            </div>
+            <h2 class="text-6xl font-black mb-6">O Próximo Passo <span class="gold-color">é Seu</span></h2>
+            <p class="text-xl text-soft mb-6">Com a conclusão da Etapa de Diagnóstico e início da estruturação do Planejamento Estratégico, a CAPITAL QUÍMICA inicia um novo ciclo de profissionalização da gestão, com foco em previsibilidade financeira, padronização de processos e crescimento sustentável.</p>
+            <p class="text-soft mb-4">A empresa concluiu a etapa de Diagnóstico com êxito, demonstrando abertura para mudanças e engajamento com os ajustes propostos. A partir deste marco, a organização está apta a avançar para a fase de Estruturação, que contempla a construção do Planejamento Estratégico voltado à estruturação de um modelo de gestão eficiente, escalável e orientado à geração de valor a longo prazo.</p>
+            <p class="text-soft mb-8">A R&V Consultores seguirá atuando de forma próxima, garantindo que cada entrega gere valor real, clareza estratégica e resultados mensuráveis. Estamos prontos para o próximo passo e você?</p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <span class="attribute-pill px-6 py-3 text-base"><i data-lucide="mail" class="inline w-4 h-4 mr-2 gold-color"></i>raiane@rveconsultores.com</span>
+                <span class="attribute-pill px-6 py-3 text-base"><i data-lucide="phone" class="inline w-4 h-4 mr-2 gold-color"></i>(62) 9 9173-9609</span>
+            </div>
+            <p class="text-softer mt-10 text-sm tracking-widest uppercase">Rodrigues & Vieira · Consultores Associados</p>
+        </div>
+        <style>
+            .cta2-breathe {
+                background: radial-gradient(ellipse at 50% 60%, rgba(154,123,79,0.12), transparent 65%);
+                animation: mira-pulse 4s ease-in-out infinite;
+            }
+        </style>
+    </section>
+
+    <script>
+        AOS.init({ duration: 800, once: true });
+        lucide.createIcons();
+        var PRIMARY = getComputedStyle(document.documentElement).getPropertyValue('--mira-primary').trim();
+        var GOLD = getComputedStyle(document.documentElement).getPropertyValue('--mira-gold').trim();
+        var ACCENT = getComputedStyle(document.documentElement).getPropertyValue('--mira-accent-2').trim();
+
+        // ============================================================
+        // SLIDE 1: CAPA — Magnetic Particles with Click Burst
+        // Unique animation: Mouse-responsive magnetic field + radial burst on click
+        // Click interaction: Creates a radial wave that pushes particles outward
+        // ============================================================
+        (function() {
+            var container = document.getElementById('capa-stage');
+            var W = window.innerWidth, H = window.innerHeight;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var N = 80;
+            var particles = d3.range(N).map(function() {
+                return {
+                    x: Math.random() * W, y: Math.random() * H,
+                    vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
+                    r: 1.5 + Math.random() * 2.5, baseR: 1.5 + Math.random() * 2.5,
+                    phase: Math.random() * 6.28
+                };
+            });
+
+            var circles = svg.selectAll('circle').data(particles).join('circle')
+                .attr('fill', GOLD).attr('opacity', 0.4);
+
+            var mouseX = W / 2, mouseY = H / 2;
+
+            container.addEventListener('mousemove', function(e) {
+                var rect = container.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+
+            container.addEventListener('click', function(e) {
+                var rect = container.getBoundingClientRect();
+                var cx = e.clientX - rect.left, cy = e.clientY - rect.top;
+                particles.forEach(function(p) {
+                    var dx = p.x - cx, dy = p.y - cy;
+                    var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                    var force = Math.max(0, 280 - dist) / 280;
+                    p.vx += (dx / dist) * force * 10;
+                    p.vy += (dy / dist) * force * 10;
+                });
+                // Ripple ring
+                var ring = svg.append('circle').attr('cx', cx).attr('cy', cy)
+                    .attr('r', 2).attr('fill', 'none').attr('stroke', GOLD)
+                    .attr('stroke-width', 2).attr('opacity', 0.6);
+                ring.transition().duration(800).ease(d3.easeCubicOut)
+                    .attr('r', 200).attr('opacity', 0).remove();
+            });
+
+            d3.timer(function(elapsed) {
+                particles.forEach(function(p) {
+                    var dx = mouseX - p.x, dy = mouseY - p.y;
+                    var dist = Math.sqrt(dx * dx + dy * dy) || 1;
+                    if (dist < 350) {
+                        p.vx += (dx / dist) * 0.06;
+                        p.vy += (dy / dist) * 0.06;
+                    }
+                    p.vx *= 0.97; p.vy *= 0.97;
+                    var speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+                    if (speed > 5) { p.vx = (p.vx / speed) * 5; p.vy = (p.vy / speed) * 5; }
+                    p.x += p.vx; p.y += p.vy;
+                    if (p.x < -30) p.x = W + 30; if (p.x > W + 30) p.x = -30;
+                    if (p.y < -30) p.y = H + 30; if (p.y > H + 30) p.y = -30;
+                    p.r = p.baseR + Math.sin(elapsed * 0.002 + p.phase) * 0.5;
+                });
+                circles.attr('cx', function(d) { return d.x; })
+                    .attr('cy', function(d) { return d.y; })
+                    .attr('r', function(d) { return d.r; });
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 2: ROTEIRO — Horizontal Timeline Accordion
+        // Unique animation: Click a node to expand it into a detail card (accordion)
+        // Click interaction: Toggle expand/collapse on each milestone node
+        // ============================================================
+        (function() {
+            var ITENS = ['Transição', 'Objetivo', 'Cenário', 'SWOT', 'Recomendações', 'Passos'];
+            var DESCRICOES = [
+                'Da gestão familiar para a profissional',
+                'Estruturar processos e finanças',
+                'Desafios e oportunidades atuais',
+                'Forças, fraquezas, oportunidades e ameaças',
+                'Estratégias personalizadas para a Capital',
+                'Implementação e acompanhamento'
+            ];
+            var stage = d3.select('#roteiro-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+            var timelineY = H * 0.65;
+            var xs = d3.scalePoint().domain(d3.range(ITENS.length)).range([80, W - 80]);
+
+            // Timeline curve
+            var lineGen = d3.line().curve(d3.curveBasis);
+            var points = d3.range(ITENS.length).map(function(i) {
+                return [xs(i), timelineY + Math.sin(i * 1.2) * 12];
+            });
+            svg.append('path').attr('d', lineGen(points))
+                .attr('stroke', 'rgba(154,123,79,0.2)').attr('stroke-width', 3)
+                .attr('fill', 'none');
+
+            // Traveling dot
+            var traveler = svg.append('circle').attr('r', 5).attr('fill', GOLD)
+                .style('filter', 'drop-shadow(0 0 6px ' + GOLD + ')');
+
+            // Node groups
+            var expanded = -1;
+            var nodeG = svg.selectAll('g.node').data(ITENS).join('g')
+                .attr('transform', function(d, i) { return 'translate(' + xs(i) + ',' + timelineY + ')'; })
+                .style('cursor', 'pointer');
+
+            nodeG.append('circle').attr('r', 0).attr('fill', '#fff')
+                .attr('stroke', GOLD).attr('stroke-width', 2.5).attr('class', 'node-ring')
+                .transition().delay(function(d, i) { return 300 + i * 120; }).duration(400)
+                .ease(d3.easeBackOut).attr('r', 22);
+
+            nodeG.append('text').text(function(d, i) { return i + 1; })
+                .attr('text-anchor', 'middle').attr('dy', 5)
+                .attr('fill', GOLD).attr('font-weight', 800).attr('font-size', 14)
+                .attr('opacity', 0).transition().delay(function(d, i) { return 500 + i * 120; }).attr('opacity', 1);
+
+            // Labels below
+            nodeG.append('text').text(function(d) { return d; })
+                .attr('text-anchor', 'middle').attr('dy', 38)
+                .attr('fill', PRIMARY).attr('font-size', 11).attr('font-weight', 600)
+                .attr('opacity', 0).transition().delay(function(d, i) { return 700 + i * 120; }).attr('opacity', 0.7);
+
+            // Detail cards (hidden initially)
+            var detailG = svg.selectAll('g.detail').data(ITENS).join('g')
+                .attr('transform', function(d, i) { return 'translate(' + xs(i) + ',' + (timelineY - 80) + ')'; })
+                .attr('opacity', 0).style('pointer-events', 'none');
+            detailG.append('rect').attr('x', -90).attr('y', -30).attr('width', 180).attr('height', 56)
+                .attr('rx', 8).attr('fill', '#fff').attr('stroke', GOLD).attr('stroke-width', 1.5)
+                .attr('opacity', 0.95);
+            detailG.append('text').text(function(d, i) { return DESCRICOES[i]; })
+                .attr('text-anchor', 'middle').attr('x', 0).attr('y', -4)
+                .attr('fill', PRIMARY).attr('font-size', 11).attr('font-weight', 600);
+            detailG.append('text').text(function(d, i) { return 'Passo ' + (i + 1); })
+                .attr('text-anchor', 'middle').attr('x', 0).attr('y', 16)
+                .attr('fill', GOLD).attr('font-size', 9).attr('font-weight', 700)
+                .attr('letter-spacing', '0.1em');
+
+            nodeG.on('click', function(event, d) {
+                var i = ITENS.indexOf(d);
+                if (expanded === i) {
+                    expanded = -1;
+                } else {
+                    expanded = i;
+                }
+                detailG.transition().duration(300)
+                    .attr('opacity', function(_, j) { return j === expanded ? 1 : 0; });
+                nodeG.selectAll('.node-ring').transition().duration(300)
+                    .attr('r', 22).attr('stroke', GOLD).attr('stroke-width', 2.5);
+                if (expanded >= 0) {
+                    d3.select(nodeG.nodes()[expanded]).select('.node-ring')
+                        .transition().duration(300).attr('r', 28).attr('stroke-width', 4);
+                }
+            });
+
+            // Continuous loop: traveler moves along timeline path
+            d3.timer(function(elapsed) {
+                var t = (elapsed * 0.00006) % 1;
+                var idx = t * (ITENS.length - 1);
+                var i0 = Math.floor(idx), i1 = Math.min(i0 + 1, ITENS.length - 1);
+                var frac = idx - i0;
+                var x = xs(i0) + (xs(i1) - xs(i0)) * frac;
+                var y = timelineY + Math.sin((i0 + frac) * 1.2) * 12;
+                traveler.attr('cx', x).attr('cy', y);
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 3: VERTEX 360° — Force-Directed Interactive Network
+        // Unique animation: Interconnected node graph with force simulation
+        // Click interaction: Click a node to highlight it and pulse connections
+        // ============================================================
+        (function() {
+            var ETAPAS = ['Diagnóstico', 'Apresentação', 'Implementação', 'Acompanhamento'];
+            var stage = d3.select('#vertex-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+
+            var cx = W / 2, cy = H / 2;
+
+            var nodes = ETAPAS.map(function(d, i) {
+                var angle = (i / ETAPAS.length) * Math.PI * 2 - Math.PI / 2;
+                return { id: i, label: d, x: cx + Math.cos(angle) * 140, y: cy + Math.sin(angle) * 100, fx: cx + Math.cos(angle) * 140, fy: cy + Math.sin(angle) * 100 };
+            });
+            var links = [];
+            for (var i = 0; i < nodes.length; i++) {
+                links.push({ source: i, target: (i + 1) % nodes.length });
+                links.push({ source: 0, target: i });
+            }
+
+            var sim = d3.forceSimulation(nodes)
+                .force('charge', d3.forceManyBody().strength(-300))
+                .force('center', d3.forceCenter(cx, cy))
+                .force('link', d3.forceLink(links).distance(150).strength(0.2))
+                .alphaDecay(0.02);
+
+            var linkG = svg.selectAll('line').data(links).join('line')
+                .attr('stroke', 'rgba(154,123,79,0.2)').attr('stroke-width', 1.5);
+
+            var nodeG = svg.selectAll('g.node').data(nodes).join('g')
+                .attr('cursor', 'pointer');
+
+            nodeG.append('circle').attr('r', 0).attr('fill', 'rgba(154,123,79,0.06)')
+                .attr('stroke', GOLD).attr('stroke-width', 2.5)
+                .transition().duration(600).delay(function(d, i) { return i * 200; })
+                .ease(d3.easeBackOut).attr('r', 38);
+
+            nodeG.append('circle').attr('r', 5).attr('fill', GOLD)
+                .attr('class', 'node-core');
+
+            nodeG.append('text').text(function(d) { return d.label; })
+                .attr('text-anchor', 'middle').attr('dy', 52)
+                .attr('fill', PRIMARY).attr('font-size', 14).attr('font-weight', 700)
+                .attr('opacity', 0).transition().delay(function(d, i) { return 400 + i * 200; }).attr('opacity', 1);
+
+            var activeNode = null;
+            nodeG.on('click', function(event, d) {
+                if (activeNode === d.id) {
+                    activeNode = null;
+                } else {
+                    activeNode = d.id;
+                }
+                nodeG.select('circle').attr('stroke-width', 2.5).attr('stroke', GOLD);
+                nodeG.select('.node-core').attr('r', 5);
+                linkG.attr('stroke', 'rgba(154,123,79,0.2)').attr('stroke-width', 1.5);
+                if (activeNode !== null) {
+                    d3.select(nodeG.nodes()[activeNode]).select('circle')
+                        .attr('stroke-width', 4).attr('stroke', GOLD);
+                    d3.select(nodeG.nodes()[activeNode]).select('.node-core')
+                        .attr('r', 9);
+                    linkG.filter(function(l) { return l.source.id === activeNode || l.target.id === activeNode; })
+                        .attr('stroke', GOLD).attr('stroke-width', 3);
+                }
+            });
+
+            sim.on('tick', function() {
+                linkG.attr('x1', function(d) { return d.source.x; })
+                    .attr('y1', function(d) { return d.source.y; })
+                    .attr('x2', function(d) { return d.target.x; })
+                    .attr('y2', function(d) { return d.target.y; });
+                nodeG.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+            });
+
+            // Continuous loop via force simulation alpha
+            d3.interval(function() { sim.alpha(0.3).restart(); }, 4000);
+
+            window.__vertexReplay = function() { sim.alpha(1).restart(); };
+        })();
+
+
+        // ============================================================
+        // SLIDE 4: ANTES E DEPOIS — Interactive Balance Scale
+        // Unique animation: Tipping balance scale with click-to-tilt
+        // Click interaction: Click left/right to tilt the scale that way
+        // ============================================================
+        (function() {
+            var container = document.getElementById('comparison-stage');
+            var rect = container.getBoundingClientRect();
+            var W = rect.width || 1200, H = rect.height || 800;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var cx = W / 2, baseY = H * 0.6;
+            var pivotY = baseY - 30;
+
+            // Base
+            svg.append('polygon')
+                .attr('points', (cx - 15) + ',' + (baseY + 20) + ' ' + (cx + 15) + ',' + (baseY + 20) + ' ' + cx + ',' + baseY)
+                .attr('fill', PRIMARY).attr('opacity', 0.3);
+
+            // Beam group
+            var beam = svg.append('g').attr('transform', 'translate(' + cx + ',' + pivotY + ')');
+            var beamLen = Math.min(W, H) * 0.35;
+
+            beam.append('line').attr('x1', -beamLen).attr('y1', 0)
+                .attr('x2', beamLen).attr('y2', 0)
+                .attr('stroke', PRIMARY).attr('stroke-width', 4).attr('stroke-linecap', 'round');
+
+            // Pivot triangle
+            svg.append('polygon')
+                .attr('points', (cx - 8) + ',' + (pivotY + 8) + ' ' + (cx + 8) + ',' + (pivotY + 8) + ' ' + cx + ',' + (pivotY - 10))
+                .attr('fill', GOLD);
+
+            // Pans
+            var leftPan = beam.append('g').attr('transform', 'translate(' + (-beamLen) + ',0)');
+            var rightPan = beam.append('g').attr('transform', 'translate(' + beamLen + ',0)');
+
+            leftPan.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 30)
+                .attr('stroke', PRIMARY).attr('stroke-width', 2);
+            leftPan.append('ellipse').attr('cx', 0).attr('cy', 32).attr('rx', 36).attr('ry', 10)
+                .attr('fill', 'rgba(5,42,94,0.08)').attr('stroke', PRIMARY).attr('stroke-width', 1.5);
+
+            rightPan.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 30)
+                .attr('stroke', PRIMARY).attr('stroke-width', 2);
+            rightPan.append('ellipse').attr('cx', 0).attr('cy', 32).attr('rx', 36).attr('ry', 10)
+                .attr('fill', 'rgba(154,123,79,0.08)').attr('stroke', GOLD).attr('stroke-width', 1.5);
+
+            // Labels
+            beam.append('text').text('Antes').attr('x', -beamLen).attr('y', -16)
+                .attr('text-anchor', 'middle').attr('fill', PRIMARY).attr('font-weight', 700).attr('font-size', 14);
+            beam.append('text').text('Depois').attr('x', beamLen).attr('y', -16)
+                .attr('text-anchor', 'middle').attr('fill', GOLD).attr('font-weight', 700).attr('font-size', 14);
+
+            var tilt = 0;
+            var targetTilt = 0;
+
+            // Continuous: gentle rocking
+            d3.timer(function(elapsed) {
+                var wave = Math.sin(elapsed * 0.001) * 3;
+                tilt += (targetTilt + wave - tilt) * 0.02;
+                beam.attr('transform', 'translate(' + cx + ',' + pivotY + ') rotate(' + tilt + ')');
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 5: FORÇAS vs FRAGILIDADES — Hanging Bar Gauge
+        // Unique animation: Horizontal diverging bars that toggle on click
+        // Click interaction: Click a bar to cross-fade detail info
+        // ============================================================
+        (function() {
+            var container = document.getElementById('balance-stage');
+            var rect = container.getBoundingClientRect();
+            var W = rect.width || 1200, H = rect.height || 800;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var cx = W / 2, barH = Math.min(40, H * 0.06), gap = 8;
+            var maxBarW = Math.min(W * 0.35, 260);
+
+            var itens = [
+                { label: 'Contábeis OK', side: 'forca', value: 85 },
+                { label: 'Estoque por ERP', side: 'forca', value: 75 },
+                { label: 'Acomp. Financeiro', side: 'forca', value: 80 },
+                { label: 'Investimento', side: 'forca', value: 65 },
+                { label: 'Liderança ciente', side: 'forca', value: 90 },
+                { label: 'Crescimento', side: 'forca', value: 70 },
+                { label: 'Equipe disposta', side: 'forca', value: 78 },
+                { label: '---', side: 'sep', value: 0 },
+                { label: 'Passivo Tributário', side: 'frag', value: 25 },
+                { label: 'Relatórios baixa conf.', side: 'frag', value: 30 },
+                { label: 'Falhas integração', side: 'frag', value: 35 },
+                { label: 'Atraso pagamentos', side: 'frag', value: 20 },
+                { label: 'Capital de giro', side: 'frag', value: 15 },
+                { label: 'Decisões centralizadas', side: 'frag', value: 40 },
+                { label: 'Responsab. pouco claras', side: 'frag', value: 28 }
+            ];
+
+            var totalH = itens.length * (barH + gap);
+            var startY = (H - totalH) / 2;
+
+            var bars = svg.selectAll('g.bar').data(itens).join('g')
+                .attr('transform', function(d, i) { return 'translate(' + cx + ',' + (startY + i * (barH + gap)) + ')'; })
+                .style('cursor', function(d) { return d.side !== 'sep' ? 'pointer' : 'default'; });
+
+            // Separator line
+            svg.append('line').attr('x1', cx).attr('x2', cx).attr('y1', startY - 5).attr('y2', startY + totalH + 5)
+                .attr('stroke', 'rgba(154,123,79,0.2)').attr('stroke-width', 1).attr('stroke-dasharray', '4 4');
+
+            bars.filter(function(d) { return d.side !== 'sep'; }).append('rect')
+                .attr('y', -barH / 2).attr('height', barH).attr('rx', 4)
+                .attr('fill', function(d) { return d.side === 'forca' ? 'rgba(5,42,94,0.15)' : 'rgba(154,123,79,0.15)'; })
+                .attr('stroke', function(d) { return d.side === 'forca' ? PRIMARY : GOLD; })
+                .attr('stroke-opacity', 0.4).attr('stroke-width', 1);
+
+            bars.filter(function(d) { return d.side !== 'sep'; }).append('rect')
+                .attr('y', -barH / 2).attr('height', barH).attr('rx', 4)
+                .attr('class', 'bar-fill')
+                .attr('fill', function(d) { return d.side === 'forca' ? PRIMARY : GOLD; })
+                .attr('opacity', 0.6);
+
+            bars.filter(function(d) { return d.side !== 'sep'; }).append('text')
+                .text(function(d) { return d.label; })
+                .attr('x', function(d) { return d.side === 'forca' ? -8 : 8; })
+                .attr('dy', 4)
+                .attr('text-anchor', function(d) { return d.side === 'forca' ? 'end' : 'start'; })
+                .attr('fill', PRIMARY).attr('font-size', 10).attr('font-weight', 600);
+
+            // Detail labels (hidden)
+            var detailLabels = bars.filter(function(d) { return d.side !== 'sep'; }).append('text')
+                .text(function(d) { return d.value + '%'; })
+                .attr('x', function(d) { return d.side === 'forca' ? -8 : 8; })
+                .attr('dy', 22)
+                .attr('text-anchor', function(d) { return d.side === 'forca' ? 'end' : 'start'; })
+                .attr('fill', GOLD).attr('font-size', 9).attr('font-weight', 700)
+                .attr('opacity', 0);
+
+            // Animate bars growing
+            bars.filter(function(d) { return d.side !== 'sep'; }).select('.bar-fill')
+                .attr('width', 0)
+                .transition().delay(function(d, i) { return i * 50; }).duration(600).ease(d3.easeCubicOut)
+                .attr('width', function(d) { return (d.value / 100) * maxBarW; })
+                .attr('x', function(d) { return d.side === 'forca' ? -(d.value / 100) * maxBarW : 0; });
+
+            // Continuous loop: gentle breathing on bars
+            d3.timer(function(elapsed) {
+                var pulse = 0.55 + Math.sin(elapsed * 0.002) * 0.15;
+                bars.filter(function(d) { return d.side !== 'sep'; }).select('.bar-fill')
+                    .attr('opacity', pulse);
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 6: SWOT — Interactive 2x2 Matrix
+        // Unique animation: Four quadrant matrix with click highlight
+        // Click interaction: Click a quadrant to highlight it and dim others
+        // ============================================================
+        (function() {
+            var container = document.getElementById('swot-stage');
+            var rect = container.getBoundingClientRect();
+            var W = rect.width || 1200, H = rect.height || 800;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var cx = W / 2, cy = H / 2;
+            var qw = Math.min(W * 0.35, 220), qh = Math.min(H * 0.3, 140);
+
+            var quads = [
+                { label: 'S', title: 'Forças', x: cx - qw - 20, y: cy - qh - 20, color: PRIMARY },
+                { label: 'W', title: 'Fraquezas', x: cx + 20, y: cy - qh - 20, color: '#5D7596' },
+                { label: 'O', title: 'Oportunidades', x: cx - qw - 20, y: cy + 20, color: PRIMARY },
+                { label: 'T', title: 'Ameaças', x: cx + 20, y: cy + 20, color: '#5D7596' }
+            ];
+
+            // Grid lines
+            svg.append('line').attr('x1', cx).attr('y1', cy - qh - 30).attr('x2', cx).attr('y2', cy + qh + 30)
+                .attr('stroke', 'rgba(0,0,0,0.06)').attr('stroke-width', 1);
+            svg.append('line').attr('x1', cx - qw - 30).attr('y1', cy).attr('x2', cx + qw + 30).attr('y2', cy)
+                .attr('stroke', 'rgba(0,0,0,0.06)').attr('stroke-width', 1);
+
+            var quadGroups = svg.selectAll('g.quad').data(quads).join('g')
+                .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
+                .style('cursor', 'pointer');
+
+            quadGroups.append('rect').attr('width', qw).attr('height', qh).attr('rx', 12)
+                .attr('fill', function(d) { return d.color; }).attr('opacity', 0.06)
+                .attr('stroke', function(d) { return d.color; }).attr('stroke-width', 1.5)
+                .attr('class', 'quad-bg');
+
+            quadGroups.append('text').text(function(d) { return d.label; })
+                .attr('x', qw / 2).attr('y', qh / 2 - 8)
+                .attr('text-anchor', 'middle').attr('fill', function(d) { return d.color; })
+                .attr('font-size', 32).attr('font-weight', 900);
+
+            quadGroups.append('text').text(function(d) { return d.title; })
+                .attr('x', qw / 2).attr('y', qh / 2 + 20)
+                .attr('text-anchor', 'middle').attr('fill', function(d) { return d.color; })
+                .attr('font-size', 12).attr('font-weight', 600);
+
+            // Continuous: subtle glow pulse on quadrants
+            d3.timer(function(elapsed) {
+                var glow = 0.05 + Math.sin(elapsed * 0.0015) * 0.03;
+                quadGroups.select('.quad-bg')
+                    .attr('opacity', function(d, i) {
+                        return glow + Math.sin(elapsed * 0.001 + i * 1.5) * 0.02;
+                    });
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 7: CICLO DE VIDA — Exploding Donut Chart
+        // Unique animation: Donut with click-to-explode segments
+        // Click interaction: Click a segment to push it outward; click again to retract
+        // ============================================================
+        (function() {
+            var DATA = [
+                { label: 'Setor\nMaduro', value: 30, color: GOLD },
+                { label: 'Empresa em\nCrescimento', value: 40, color: PRIMARY },
+                { label: 'Gestão:\nEstruturar', value: 30, color: ACCENT }
+            ];
+            var stage = d3.select('#ciclo-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+            var cx = W / 2, cy = H / 2;
+
+            var g = svg.append('g').attr('transform', 'translate(' + cx + ',' + cy + ')');
+
+            var pie = d3.pie().value(function(d) { return d.value; }).sort(null);
+            var arc = d3.arc().innerRadius(70).outerRadius(130);
+            var arcExploded = d3.arc().innerRadius(70).outerRadius(155);
+
+            var segments = g.selectAll('path').data(pie(DATA)).join('path')
+                .attr('d', arc).attr('fill', function(d) { return d.data.color; })
+                .attr('opacity', 0.8).attr('stroke', '#fff').attr('stroke-width', 2)
+                .style('cursor', 'pointer');
+
+            // Labels
+            var labels = g.selectAll('text').data(pie(DATA)).join('text')
+                .attr('transform', function(d) {
+                    var pos = arc.centroid(d);
+                    return 'translate(' + pos[0] + ',' + pos[1] + ')';
+                })
+                .attr('text-anchor', 'middle').attr('dy', 4)
+                .attr('fill', '#fff').attr('font-size', 10).attr('font-weight', 700)
+                .text(function(d) { return d.data.value + '%'; })
+                .attr('opacity', 0).transition().delay(600).attr('opacity', 1);
+
+            // Outer label links
+            var outerLabels = g.selectAll('g.olabel').data(pie(DATA)).join('g');
+            outerLabels.append('line')
+                .attr('x1', function(d) { return arc.centroid(d)[0] * 1.5; })
+                .attr('y1', function(d) { return arc.centroid(d)[1] * 1.5; })
+                .attr('x2', function(d) { return arc.centroid(d)[0] * 2.2; })
+                .attr('y2', function(d) { return arc.centroid(d)[1] * 2.2; })
+                .attr('stroke', 'rgba(26,26,26,0.2)').attr('stroke-width', 1);
+            outerLabels.append('text')
+                .attr('x', function(d) { return arc.centroid(d)[0] * 2.3; })
+                .attr('y', function(d) { return arc.centroid(d)[1] * 2.3 + 4; })
+                .attr('text-anchor', 'middle').attr('fill', PRIMARY)
+                .attr('font-size', 10).attr('font-weight', 600)
+                .text(function(d) { return d.data.label.replace('\n', ' '); })
+                .attr('opacity', 0).transition().delay(900).attr('opacity', 0.7);
+
+            var exploded = null;
+            segments.on('click', function(event, d) {
+                if (exploded === d) { exploded = null; }
+                else { exploded = d; }
+                segments.transition().duration(400).ease(d3.easeCubicOut)
+                    .attr('d', function(s) {
+                        if (s === exploded) return arcExploded(s);
+                        return arc(s);
+                    })
+                    .attr('opacity', function(s) {
+                        return exploded && s !== exploded ? 0.4 : 0.85;
+                    });
+                labels.transition().duration(400)
+                    .attr('transform', function(s) {
+                        var pos = s === exploded ? arcExploded.centroid(s) : arc.centroid(s);
+                        return 'translate(' + pos[0] + ',' + pos[1] + ')';
+                    });
+            });
+
+            // Continuous loop: gentle pulse on outer ring
+            var pulseRing = svg.append('circle').attr('cx', cx).attr('cy', cy)
+                .attr('r', 135).attr('fill', 'none').attr('stroke', GOLD)
+                .attr('stroke-width', 1).attr('opacity', 0);
+
+            d3.interval(function() {
+                pulseRing.attr('r', 130).attr('opacity', 0.4)
+                    .transition().duration(2000).ease(d3.easeCubicOut)
+                    .attr('r', 160).attr('opacity', 0);
+            }, 2500);
+
+            window.__cicloReplay = function() {
+                segments.attr('d', arc).attr('opacity', 0.85);
+                exploded = null;
+            };
+        })();
+
+
+        // ============================================================
+        // SLIDE 8: CTA — Ripple Water Effect
+        // Unique animation: Concentric water ripples emanating from clicks
+        // Click interaction: Click anywhere to create a new ripple wave
+        // ============================================================
+        (function() {
+            var container = document.getElementById('cta1-stage');
+            var rect = container.getBoundingClientRect();
+            var W = rect.width || 1200, H = rect.height || 800;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var cx = W / 2, cy = H / 2;
+
+            // Continuous center ripples
+            function spawnRipple(x, y) {
+                var ring = svg.append('circle').attr('cx', x).attr('cy', y)
+                    .attr('r', 5).attr('fill', 'none').attr('stroke', GOLD)
+                    .attr('stroke-width', 2).attr('opacity', 0.5);
+                ring.transition().duration(1500).ease(d3.easeCubicOut)
+                    .attr('r', Math.max(W, H) * 0.5).attr('opacity', 0)
+                    .on('end', function() { ring.remove(); });
+                // Second ring delayed
+                var ring2 = svg.append('circle').attr('cx', x).attr('cy', y)
+                    .attr('r', 5).attr('fill', 'none').attr('stroke', GOLD)
+                    .attr('stroke-width', 1.5).attr('opacity', 0.3);
+                ring2.transition().delay(300).duration(1200).ease(d3.easeCubicOut)
+                    .attr('r', Math.max(W, H) * 0.45).attr('opacity', 0)
+                    .on('end', function() { ring2.remove(); });
+            }
+
+            // Click to spawn ripple
+            svg.on('click', function(event) {
+                var pt = d3.pointer(event);
+                spawnRipple(pt[0], pt[1]);
+            });
+
+            // Continuous: center ripples
+            d3.interval(function() { spawnRipple(cx, cy); }, 2000);
+
+            // Initial ripple
+            setTimeout(function() { spawnRipple(cx, cy); }, 500);
+        })();
+
+
+        // ============================================================
+        // SLIDE 9: 4 PILARES — Interactive Radar / Polar Chart
+        // Unique animation: Rotating radar chart with click-to-highlight axis
+        // Click interaction: Click a vertex to highlight that pillar
+        // ============================================================
+        (function() {
+            var PILARES = [
+                { label: 'Gestão Financeira', value: 85 },
+                { label: 'Arquitetura de Processos', value: 60 },
+                { label: 'Arquitetura de Times', value: 70 },
+                { label: 'Inteligência Comercial', value: 55 }
+            ];
+            var stage = d3.select('#pilares-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+            var cx = W / 2, cy = H / 2, R = Math.min(W, H) * 0.32;
+            var levels = [3, 2, 1];
+
+            var radialLine = d3.lineRadial()
+                .curve(d3.curveLinearClosed)
+                .radius(function(d) { return (d.value / 100) * R; })
+                .angle(function(d, i) { return (i * 2 * Math.PI) / PILARES.length - Math.PI / 2; });
+
+            // Background grid
+            levels.forEach(function(l) {
+                var r = (l / 3) * R;
+                svg.append('circle').attr('cx', cx).attr('cy', cy).attr('r', r)
+                    .attr('fill', 'none').attr('stroke', 'rgba(0,0,0,0.06)');
+            });
+
+            // Axis lines
+            var axes = svg.selectAll('line.axis').data(PILARES).join('line')
+                .attr('x1', cx).attr('y1', cy)
+                .attr('x2', function(d, i) { return cx + Math.cos(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * R; })
+                .attr('y2', function(d, i) { return cy + Math.sin(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * R; })
+                .attr('stroke', 'rgba(0,0,0,0.08)');
+
+            // Data polygon
+            var poly = svg.append('path').attr('fill', GOLD).attr('opacity', 0.15)
+                .attr('stroke', GOLD).attr('stroke-width', 2);
+
+            // Value dots
+            var dots = svg.selectAll('circle.dot').data(PILARES).join('circle')
+                .attr('r', 6).attr('fill', GOLD).attr('stroke', '#fff').attr('stroke-width', 2)
+                .style('cursor', 'pointer');
+
+            // Labels
+            var labels = svg.selectAll('text.alabel').data(PILARES).join('text')
+                .attr('text-anchor', 'middle').attr('fill', PRIMARY)
+                .attr('font-size', 12).attr('font-weight', 600);
+
+            var activeAxis = -1;
+
+            function update() {
+                poly.datum(PILARES).attr('d', radialLine);
+                dots.attr('cx', function(d, i) {
+                        return cx + Math.cos(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * (d.value / 100) * R;
+                    })
+                    .attr('cy', function(d, i) {
+                        return cy + Math.sin(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * (d.value / 100) * R;
+                    })
+                    .attr('r', function(d, i) { return i === activeAxis ? 10 : 6; });
+                labels.attr('x', function(d, i) {
+                        return cx + Math.cos(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * (R + 30);
+                    })
+                    .attr('y', function(d, i) {
+                        return cy + Math.sin(i * 2 * Math.PI / PILARES.length - Math.PI / 2) * (R + 30) + 4;
+                    })
+                    .text(function(d) { return d.label; })
+                    .attr('fill', function(d, i) { return i === activeAxis ? GOLD : PRIMARY; })
+                    .attr('font-weight', function(d, i) { return i === activeAxis ? 800 : 600; });
+                axes.attr('stroke', function(d, i) { return i === activeAxis ? GOLD : 'rgba(0,0,0,0.08)'; })
+                    .attr('stroke-width', function(d, i) { return i === activeAxis ? 3 : 1; });
+            }
+
+            dots.on('click', function(event, d) {
+                var i = PILARES.indexOf(d);
+                activeAxis = activeAxis === i ? -1 : i;
+                update();
+            });
+
+            // Entrance
+            setTimeout(function() {
+                poly.transition().duration(800).attrTween('d', function() {
+                    var interpolator = d3.interpolate(
+                        PILARES.map(function() { return 0; }),
+                        PILARES.map(function(d) { return d.value; })
+                    );
+                    return function(t) {
+                        var data = PILARES.map(function(d, i) { return { value: interpolator(t)[i] }; });
+                        PILARES.forEach(function(d, i) { d._animValue = interpolator(t)[i]; });
+                        return d3.lineRadial()
+                            .curve(d3.curveLinearClosed)
+                            .radius(function(d) { return (d._animValue / 100) * R; })
+                            .angle(function(d, i) { return (i * 2 * Math.PI) / PILARES.length - Math.PI / 2; })(PILARES);
+                    };
+                });
+                dots.transition().duration(800).delay(200).attrTween('r', function() { return d3.interpolate(0, 6); });
+                labels.transition().duration(400).delay(600).attr('opacity', 1);
+            }, 300);
+
+            // Continuous loop: subtle rotation
+            var rot = 0;
+            d3.timer(function(elapsed) {
+                rot = -Math.sin(elapsed * 0.0003) * 2;
+                if (activeAxis === -1) {
+                    var transform = 'translate(' + cx + ',' + cy + ') rotate(' + rot + ')';
+                    poly.attr('transform', transform);
+                    dots.attr('transform', 'rotate(' + rot + ',' + cx + ',' + cy + ')');
+                    labels.attr('transform', 'rotate(' + rot + ',' + cx + ',' + cy + ')');
+                    axes.attr('transform', 'rotate(' + rot + ',' + cx + ',' + cy + ')');
+                }
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 10: GESTÃO FINANCEIRA — Sortable Bar Chart
+        // Unique animation: Bars that re-sort on click
+        // Click interaction: Click a bar to toggle ascending/descending sort
+        // ============================================================
+        (function() {
+            var DATA = [
+                { label: 'Revisar\nSistemas', value: 25, full: 'Revisar Sistemas Contábeis' },
+                { label: 'DRE\nGerencial', value: 35, full: 'DRE Gerencial Mensal' },
+                { label: 'Capital\nde Giro', value: 20, full: 'Estrutura de Capital de Giro' },
+                { label: 'Metas\ne KPIs', value: 30, full: 'Metas e KPIs Financeiros' }
+            ];
+            var stage = d3.select('#financas-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+            var margin = { top: 50, bottom: 80, left: 40, right: 40 };
+            var iw = W - margin.left - margin.right, ih = H - margin.top - margin.bottom;
+
+            var x = d3.scaleBand().domain(d3.range(DATA.length)).range([0, iw]).padding(0.3);
+            var y = d3.scaleLinear().domain([0, 40]).range([ih, 0]);
+
+            var g = svg.append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+            var sortAsc = false;
+            var sortKey = -1;
+
+            var barG = g.selectAll('g.barg').data(DATA).join('g')
+                .attr('transform', function(d, i) { return 'translate(' + x(i) + ',0)'; })
+                .style('cursor', 'pointer');
+
+            barG.append('rect').attr('y', ih).attr('width', x.bandwidth()).attr('height', 0)
+                .attr('rx', 6).attr('fill', GOLD).attr('opacity', 0.8)
+                .attr('class', 'bar-val');
+
+            barG.append('text')
+                .text(function(d) { return d.label.split('\n')[0]; })
+                .attr('x', x.bandwidth() / 2).attr('y', ih + 16)
+                .attr('text-anchor', 'middle').attr('fill', PRIMARY)
+                .attr('font-size', 11).attr('font-weight', 600);
+            barG.append('text')
+                .text(function(d) { return d.label.split('\n')[1] || ''; })
+                .attr('x', x.bandwidth() / 2).attr('y', ih + 32)
+                .attr('text-anchor', 'middle').attr('fill', 'rgba(26,26,26,0.4)')
+                .attr('font-size', 9);
+
+            // Entrance
+            barG.each(function(d, i) {
+                var bar = d3.select(this).select('.bar-val');
+                bar.transition().delay(i * 200).duration(600).ease(d3.easeCubicOut)
+                    .attr('y', y(d.value)).attr('height', ih - y(d.value));
+            });
+
+            // Value labels on bars
+            barG.append('text').attr('class', 'val-text')
+                .attr('x', x.bandwidth() / 2).attr('y', function(d) { return y(d.value) - 8; })
+                .attr('text-anchor', 'middle').attr('fill', GOLD)
+                .attr('font-size', 16).attr('font-weight', 800)
+                .text(function(d) { return d.value; })
+                .attr('opacity', 0).transition().delay(function(d, i) { return 400 + i * 200; }).attr('opacity', 1);
+
+            // Detail tooltips on bars
+            barG.append('text').attr('class', 'detail-text')
+                .attr('x', x.bandwidth() / 2).attr('y', function(d) { return y(d.value) - 26; })
+                .attr('text-anchor', 'middle').attr('fill', 'rgba(26,26,26,0.5)')
+                .attr('font-size', 9).attr('font-weight', 500)
+                .text(function(d) { return d.full; })
+                .attr('opacity', 0);
+
+            barG.on('click', function(event, d) {
+                var idx = DATA.indexOf(d);
+                if (sortKey === idx) { sortAsc = !sortAsc; }
+                else { sortKey = idx; sortAsc = false; }
+                var sorted = DATA.slice().sort(function(a, b) {
+                    return sortAsc ? a.value - b.value : b.value - a.value;
+                });
+                x.domain(d3.range(DATA.length));
+                barG.transition().duration(500).ease(d3.easeCubicInOut)
+                    .attr('transform', function(d2) {
+                        var newIdx = sorted.indexOf(d2);
+                        return 'translate(' + x(newIdx) + ',0)';
+                    });
+                // Show detail on clicked bar, hide others
+                barG.select('.detail-text').transition().duration(200).attr('opacity', 0);
+                d3.select(this).select('.detail-text').transition().delay(500).duration(200).attr('opacity', 1);
+            });
+
+            // Continuous loop: gentle wave
+            d3.timer(function(elapsed) {
+                barG.select('.bar-val').attr('y', function(d) {
+                        var wave = Math.sin(elapsed * 0.003 + d.value * 0.1) * 2;
+                        return y(d.value) + wave;
+                    })
+                    .attr('height', function(d) {
+                        var wave = Math.sin(elapsed * 0.003 + d.value * 0.1) * 2;
+                        return ih - y(d.value) - wave;
+                    });
+            });
+
+            window.__financasReplay = function() {
+                sortKey = -1;
+                x.domain(d3.range(DATA.length));
+                barG.transition().duration(500).attr('transform', function(d, i) { return 'translate(' + x(i) + ',0)'; });
+                barG.select('.detail-text').attr('opacity', 0);
+            };
+        })();
+
+
+        // ============================================================
+        // SLIDE 11: PROCESSOS, TIMES, MERCADO — Interactive Venn Diagram
+        // Unique animation: Three overlapping circles with click highlight
+        // Click interaction: Click a circle to highlight it; intersections emphasize
+        // ============================================================
+        (function() {
+            var LABELS = ['Processos', 'Times', 'Mercado'];
+            var stage = d3.select('#tripe-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+            var cx = W / 2, cy = H / 2, R = 120;
+            var offset = 70;
+
+            var centers = [
+                { x: cx - offset, y: cy, label: 'Processos', color: PRIMARY },
+                { x: cx + offset, y: cy - offset * 0.6, label: 'Times', color: GOLD },
+                { x: cx + offset, y: cy + offset * 0.6, label: 'Mercado', color: ACCENT }
+            ];
+
+            var circles = svg.selectAll('circle.venn').data(centers).join('circle')
+                .attr('cx', function(d) { return d.x; })
+                .attr('cy', function(d) { return d.y; })
+                .attr('r', R)
+                .attr('fill', function(d) { return d.color; })
+                .attr('opacity', 0.12)
+                .attr('stroke', function(d) { return d.color; })
+                .attr('stroke-width', 2)
+                .style('cursor', 'pointer')
+                .attr('class', 'venn');
+
+            // Labels
+            var labelG = svg.selectAll('g.vlabel').data(centers).join('g')
+                .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+
+            labelG.append('text').text(function(d) { return d.label; })
+                .attr('text-anchor', 'middle').attr('dy', 4)
+                .attr('fill', function(d) { return d.color; })
+                .attr('font-size', 16).attr('font-weight', 800);
+
+            var activeCircle = -1;
+            circles.on('click', function(event, d) {
+                var idx = centers.indexOf(d);
+                if (activeCircle === idx) { activeCircle = -1; }
+                else { activeCircle = idx; }
+                circles.transition().duration(300)
+                    .attr('opacity', function(c, i) {
+                        if (activeCircle === -1) return 0.12;
+                        return i === activeCircle ? 0.25 : 0.06;
+                    })
+                    .attr('stroke-width', function(c, i) {
+                        return i === activeCircle ? 4 : 2;
+                    });
+                labelG.select('text').transition().duration(300)
+                    .attr('font-size', function(c, i) {
+                        return i === activeCircle ? 20 : 16;
+                    });
+            });
+
+            // Continuous loop: gentle breathing
+            d3.timer(function(elapsed) {
+                circles.attr('r', R + Math.sin(elapsed * 0.001) * 3);
+            });
+        })();
+
+
+        // ============================================================
+        // SLIDE 12: PRÓXIMOS PASSOS — Bouncing Balls
+        // Unique animation: Balls bounce with gravity; click to catch/release
+        // Click interaction: Click a ball to freeze it and expand info; click again to release
+        // ============================================================
+        (function() {
+            var PASSOS = [
+                { label: 'Validação', desc: 'Relatórios validados', color: PRIMARY, x: 200 },
+                { label: 'Estruturação', desc: 'PE construído', color: GOLD, x: 480 },
+                { label: 'Implementação', desc: 'Equipe engajada', color: ACCENT, x: 760 }
+            ];
+            var stage = d3.select('#passos-stage');
+            var W = 960, H = 540;
+            var svg = stage.append('svg').attr('viewBox', '0 0 ' + W + ' ' + H);
+
+            // Ground
+            svg.append('line').attr('x1', 80).attr('x2', W - 80)
+                .attr('y1', H - 60).attr('y2', H - 60)
+                .attr('stroke', 'rgba(0,0,0,0.08)').attr('stroke-width', 2);
+
+            // Pedestals
+            PASSOS.forEach(function(p, i) {
+                svg.append('rect').attr('x', p.x - 60).attr('y', H - 60)
+                    .attr('width', 120).attr('height', 8).attr('rx', 4)
+                    .attr('fill', p.color).attr('opacity', 0.15);
+                svg.append('text').text(p.label).attr('x', p.x)
+                    .attr('y', H - 28).attr('text-anchor', 'middle')
+                    .attr('fill', p.color).attr('font-size', 14).attr('font-weight', 700);
+            });
+
+            // Balls
+            var balls = PASSOS.map(function(p) {
+                return {
+                    data: p,
+                    x: p.x, y: H - 100 - Math.random() * 80,
+                    vy: 0, r: 22,
+                    caught: false, opacity: 1
+                };
+            });
+
+            var ballG = svg.selectAll('g.ball').data(balls).join('g')
+                .style('cursor', 'pointer');
+
+            ballG.append('circle').attr('r', 0).attr('fill', function(d) { return d.data.color; })
+                .attr('opacity', 0.85).attr('stroke', '#fff').attr('stroke-width', 2)
+                .attr('class', 'ball-body')
+                .transition().duration(600).delay(function(d, i) { return i * 200; })
+                .ease(d3.easeBackOut).attr('r', 22);
+
+            ballG.append('text').attr('class', 'ball-label')
+                .attr('text-anchor', 'middle').attr('dy', 5)
+                .attr('fill', '#fff').attr('font-size', 10).attr('font-weight', 700)
+                .text(function(d) { return d.data.label.slice(0, 4); });
+
+            // Detail text (hidden)
+            var detailG = svg.selectAll('g.bdetail').data(balls).join('g').attr('opacity', 0);
+            detailG.append('text').attr('class', 'bdesc')
+                .attr('text-anchor', 'middle').attr('dy', 0)
+                .attr('fill', function(d) { return d.data.color; })
+                .attr('font-size', 12).attr('font-weight', 600);
+
+            var gravity = 0.25;
+            var groundY = H - 62;
+
+            ballG.on('click', function(event, d) {
+                d.caught = !d.caught;
+                var ball = d3.select(this);
+                var detail = d3.select(detailG.nodes()[balls.indexOf(d)]);
+                if (d.caught) {
+                    d.vy = 0;
+                    ball.select('.ball-body').transition().duration(300).attr('r', 30);
+                    var pt = ball.attr('transform');
+                    var match = pt.match(/translate\(([^,]+),([^)]+)\)/);
+                    var bx = match ? parseFloat(match[1]) : d.x;
+                    var by = match ? parseFloat(match[2]) : d.y;
+                    detail.attr('transform', 'translate(' + bx + ',' + (by - 45) + ')');
+                    detail.select('.bdesc').text(d.data.desc);
+                    detail.transition().duration(300).attr('opacity', 1);
+                } else {
+                    ball.select('.ball-body').transition().duration(300).attr('r', 22);
+                    detail.transition().duration(200).attr('opacity', 0);
+                }
+            });
+
+            // Continuous loop: physics
+            d3.timer(function() {
+                balls.forEach(function(d) {
+                    if (d.caught) return;
+                    d.vy += gravity;
+                    d.y += d.vy;
+                    if (d.y > groundY) {
+                        d.y = groundY;
+                        d.vy *= -0.75;
+                        if (Math.abs(d.vy) < 0.5) d.vy = 0;
+                    }
+                });
+                ballG.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+                detailG.attr('transform', function(d, i) {
+                    if (!d.caught) return null;
+                    return 'translate(' + d.x + ',' + (d.y - 45) + ')';
+                });
+            });
+
+            window.__passosReplay = function() {
+                balls.forEach(function(b) {
+                    b.caught = false;
+                    b.y = groundY - 30 - Math.random() * 60;
+                    b.vy = Math.random() * -5;
+                });
+                detailG.attr('opacity', 0);
+                ballG.select('.ball-body').attr('r', 22);
+            };
+        })();
+
+
+        // ============================================================
+        // SLIDE 13: ENCERRAMENTO — Constellation with Shooting Stars
+        // Unique animation: Star constellation that twinkles; click to launch shooting star
+        // Click interaction: Click a star to turn it into a shooting star
+        // ============================================================
+        (function() {
+            var container = document.getElementById('cta2-stage');
+            var rect = container.getBoundingClientRect();
+            var W = rect.width || 1200, H = rect.height || 800;
+            var svg = d3.select(container).append('svg')
+                .attr('viewBox', '0 0 ' + W + ' ' + H)
+                .style('width', '100%').style('height', '100%')
+                .style('display', 'block').style('pointer-events', 'auto');
+
+            var N = 35;
+            var stars = d3.range(N).map(function() {
+                return {
+                    x: Math.random() * W, y: Math.random() * H * 0.8 + 40,
+                    r: 1 + Math.random() * 2.5,
+                    phase: Math.random() * 6.28,
+                    speed: 0.3 + Math.random() * 1.2,
+                    label: ''
+                };
+            });
+
+            // Star glow filter
+            var defs = svg.append('defs');
+            defs.append('filter').attr('id', 'starGlow')
+                .append('feGaussianBlur').attr('stdDeviation', 2);
+
+            // Connections (Delaunay-like: connect nearby stars)
+            var connections = [];
+            for (var i = 0; i < stars.length; i++) {
+                for (var j = i + 1; j < stars.length; j++) {
+                    var dx = stars[i].x - stars[j].x, dy = stars[i].y - stars[j].y;
+                    var dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 120) {
+                        connections.push({ s: i, t: j, dist: dist });
+                    }
+                }
+            }
+
+            var lines = svg.selectAll('line').data(connections).join('line')
+                .attr('stroke', GOLD).attr('stroke-opacity', 0.08).attr('stroke-width', 0.8);
+
+            var dots = svg.selectAll('circle.star').data(stars).join('circle')
+                .attr('cx', function(d) { return d.x; })
+                .attr('cy', function(d) { return d.y; })
+                .attr('r', function(d) { return d.r; })
+                .attr('fill', GOLD)
+                .attr('opacity', 0.5)
+                .style('cursor', 'pointer');
+
+            // Click to create shooting star
+            dots.on('click', function(event, d) {
+                var angle = Math.random() * Math.PI * 2;
+                var dist = Math.max(W, H) * 0.6;
+                var endX = d.x + Math.cos(angle) * dist;
+                var endY = d.y + Math.sin(angle) * dist;
+                var trail = svg.append('line')
+                    .attr('x1', d.x).attr('y1', d.y)
+                    .attr('x2', d.x).attr('y2', d.y)
+                    .attr('stroke', GOLD).attr('stroke-width', 3)
+                    .attr('opacity', 0.8)
+                    .attr('stroke-linecap', 'round');
+                var head = svg.append('circle')
+                    .attr('cx', d.x).attr('cy', d.y)
+                    .attr('r', 3).attr('fill', '#fff')
+                    .attr('filter', 'url(#starGlow)');
+                trail.transition().duration(600).ease(d3.easeCubicIn)
+                    .attr('x2', endX).attr('y2', endY)
+                    .attr('opacity', 0).remove();
+                head.transition().duration(600).ease(d3.easeCubicIn)
+                    .attr('cx', endX).attr('cy', endY)
+                    .attr('opacity', 0).remove();
+            });
+
+            // Continuous loop: twinkling + pulsing connections
+            d3.timer(function(elapsed) {
+                dots.attr('opacity', function(d) {
+                    return 0.3 + Math.sin(elapsed * 0.002 + d.phase) * 0.3;
+                }).attr('r', function(d) {
+                    return d.r + Math.sin(elapsed * 0.003 + d.phase) * 0.5;
+                });
+                lines.attr('stroke-opacity', function(c) {
+                    return 0.04 + Math.sin(elapsed * 0.001 + c.s * 2) * 0.06;
+                });
+            });
+        })();
+
+
+        // === CONTROLES DE SLIDE: navegação card-a-card ===
+        (function () {
+            const cardSections = Array.from(document.querySelectorAll('body > .main-content > section'));
+            if (cardSections.length === 0) return;
+
+            const progress = document.getElementById('mira-progress');
+            const nextBtn = document.getElementById('mira-next');
+            const nextIcon = document.getElementById('mira-next-icon');
+
+            const atBottom = () =>
+                (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 100);
+
+            function currentIndex() {
+                const y = window.scrollY + window.innerHeight * 0.3;
+                let idx = -1;
+                for (let i = 0; i < cardSections.length; i++) {
+                    if (cardSections[i].offsetTop <= y) idx = i;
+                }
+                return idx;
+            }
+
+            function goTo(i) {
+                const idx = Math.max(0, Math.min(cardSections.length - 1, i));
+                cardSections[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            window.addEventListener('scroll', () => {
+                const docH = document.documentElement.scrollHeight - window.innerHeight;
+                progress.style.width = (docH > 0 ? (window.scrollY / docH) * 100 : 0) + '%';
+                nextBtn.classList.toggle('visible', window.scrollY > 300);
+                nextIcon.setAttribute('data-lucide', atBottom() ? 'chevron-up' : 'chevron-down');
+                lucide.createIcons();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (atBottom()) { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+                goTo(currentIndex() + 1);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (['ArrowRight', 'ArrowDown', 'PageDown'].includes(e.key)) {
+                    e.preventDefault();
+                    goTo(currentIndex() + 1);
+                } else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) {
+                    e.preventDefault();
+                    const idx = currentIndex();
+                    if (idx <= 0) window.scrollTo({ top: 0, behavior: 'smooth' });
+                    else goTo(idx - 1);
+                } else if (e.key === 'Home') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else if (e.key === 'End') {
+                    e.preventDefault();
+                    goTo(cardSections.length - 1);
+                } else if (e.key.toLowerCase() === 'f') {
+                    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+                    else document.exitFullscreen();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Sidebar: highlight, collapse e toggle -->
+    <script>
+        (function() {
+            var links = document.querySelectorAll('.nav-link');
+            var sections = Array.from(document.querySelectorAll('body > .main-content > section'));
+
+            function updateSidebar() {
+                var y = window.scrollY + window.innerHeight * 0.3;
+                var active = 0;
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].offsetTop <= y) active = i;
+                }
+                links.forEach(function(l, i) { l.classList.toggle('active', i === active); });
+            }
+            window.addEventListener('scroll', updateSidebar);
+            links.forEach(function(l) {
+                l.addEventListener('click', function() {
+                    var idx = parseInt(l.dataset.target);
+                    if (!isNaN(idx) && sections[idx]) sections[idx].scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            document.querySelectorAll('.nav-group').forEach(function(g) {
+                g.addEventListener('click', function() {
+                    g.classList.toggle('collapsed');
+                });
+            });
+
+            var sb = document.getElementById('sidebar');
+            var btn = document.getElementById('sbToggle');
+            btn.addEventListener('click', function() {
+                sb.classList.toggle('closed');
+                btn.textContent = sb.classList.contains('closed') ? '▶' : '◀';
+            });
+        })();
+    </script>
+
+    <script src="mira/mira-edit.js" defer></script>
+    <script src="mira/mira-draw.js" defer></script>
+    </div>
+</body>
+
+</html>
